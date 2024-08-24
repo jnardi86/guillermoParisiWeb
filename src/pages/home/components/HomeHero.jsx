@@ -1,18 +1,15 @@
-import React from 'react'
-import "./HomeHero.css"
+import React from "react";
+import "./HomeHero.css";
+import { useGlobal } from "../../../hooks/useGlobal";
+import HomeHeroSwiper from "./HomeHeroSwiper";
 
-const HomeHero = ({ heroTitle, heroParagraph }) => {
+const HomeHero = () => {
+  const { mobileView } = useGlobal();
   return (
-    <div className="hero">
-      <div className='hero--container'>
-        <div className="hero--container-body">
-          <h2 className='titleSize2 titleStyle1 '>{heroTitle}</h2>
-          <p className='textSize3 textStyle1'>{heroParagraph}</p>
-        </div>
-      </div>
-    </div>
+    <>
+      <HomeHeroSwiper />
+    </>
+  );
+};
 
-  )
-}
-
-export default HomeHero
+export default HomeHero;

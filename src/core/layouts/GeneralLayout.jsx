@@ -7,7 +7,7 @@ import LanguageProvider from '../../providers/LanguageProvider'
 
 const GeneralLayout = ({ children }) => {
     return (
-        <div>
+        <div className='max-w-[1920px] mx-auto'>
             <LanguageProvider>
                 <Navbar />
                 {children}

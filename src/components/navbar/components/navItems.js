@@ -4,15 +4,11 @@ export const navItems = [
       link: "/",
     },
     {
-      label: "services",
-      link: "/services",
+      label: "program",
+      link: "/programa",
     },
     {
-      label: "about",
-      link: "/about",
-    },
-    {
-      label: "contact",
-      link: "/contact",
-    },
+      label: "patients",
+      link: "/pacientes",
+    }
   ]

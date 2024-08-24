@@ -4,7 +4,7 @@ import { LanguageContext } from "../../../../src/context/LanguageContext";
 import i18n from "../../../core/config/i18n";
 import "./switchLanguage.css"
 import sp_flag from "../../../assets/sp_flag.jpg"
-import en_flag from "../../../assets/uk_flag.jpg"
+import it_flag from "../../../assets/it_flag.png"
 import pt_flag from "../../../assets/pt_flag.jpg"
 
 
@@ -16,7 +16,7 @@ const SwitchLanguage = () => {
 
     const languageOptions = [
         { value: 'es', label: <span><img className="imgFlag" src={sp_flag} alt="Spain flag" /></span> },
-        { value: 'en', label: <span><img className="imgFlag" src={en_flag} alt="UK flag" /></span> },
+        { value: 'it', label: <span><img className="imgFlag" src={it_flag} alt="UK flag" /></span> },
         { value: 'pt', label: <span><img className="imgFlag" src={pt_flag} alt="Portughese flag" /></span> },
     ];
 

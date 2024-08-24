@@ -20,7 +20,8 @@ i18next
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
-        fallbackLng: 'en',
+        supportedLngs: ['it', 'es', 'pt'], // List all your supported languages here
+        fallbackLng: 'es',
         detection: options,
         debug: true,
         interpolation: {

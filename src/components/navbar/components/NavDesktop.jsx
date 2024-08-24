@@ -1,36 +1,45 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import '../../navbar/navbar.css';
-import { navItems } from "./navItems"
-import SwitchLanguage from './SwitchLanguage';
-import { useTranslation } from 'react-i18next';
-import "../../../../src/styles.css"
+import React from "react";
+import { Link } from "react-router-dom";
+import "../../navbar/navbar.css";
+import { navItems } from "./navItems";
+import SwitchLanguage from "./SwitchLanguage";
+import { useTranslation } from "react-i18next";
+import useNavDesktop from "../hooks/useNavDesktop";
+import "../../../../src/styles.css";
 
 const NavDesktop = () => {
-
-  const { t } = useTranslation('translation', { keyPrefix: 'navbar' });
+  const { alpha } = useNavDesktop();
+  const { t } = useTranslation("translation", { keyPrefix: "navbar" });
 
   return (
-    <nav>
-      <div className="navDesktop--container">
-        <div className="navDesktop__logo">
-          <p className='titlePri3'><strong>Dra.</strong> María Elena<strong> Levín</strong></p>
+    <nav className="fixed top-0 left-0 w-full z-50">
+      <div
+        className="flex justify-between items-center px-5"
+        style={{
+          backgroundColor: `rgba(34, 58, 94, ${alpha}`,
+        }}
+      >
+        <div className="bg-Blue p-5 text-White text-2xl">
+          <p>Residencia Cigomáticos</p>
         </div>
-        <div className="navDesktop__links">
-          <ul>
+
+        <div className="flex items-center">
+          <ul className="flex space-x-4">
             {navItems.map((item, index) => {
               return (
                 <li key={index}>
-                  <Link className="linkTo textLinks" to={item.link}>{t(item.label)}</Link></li>
-              )
+                  <Link className="text-White p-5" to={item.link}>
+                    {t(item.label)}
+                  </Link>
+                </li>
+              );
             })}
           </ul>
-          <SwitchLanguage/>
         </div>
-
+        <SwitchLanguage />
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default NavDesktop
+export default NavDesktop;

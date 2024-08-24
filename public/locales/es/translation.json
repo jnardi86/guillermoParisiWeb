@@ -1,6 +1,8 @@
 {
     "navbar": {
         "home": "Inicio",
+        "program": "Programa",
+        "patients": "Pacientes",
         "services": "Servicios",
         "about": "Sobre mi",
         "contact": "Contacto"
@@ -11,8 +13,12 @@
         "contact": "Contacto"
     },
     "home": {
-        "home_hero_title": "¿Tenes dudas sobre tu diagnóstico?",
-        "home_hero_paragraph": "Consulta por una segunda opinión especializada en imágenes",
+        "home_hero_title_1": "Residencia en Implantes Cigomáticos",
+        "home_hero_subtitle_1": "Formación avanzada para especialistas en cirugía maxilofacial. Domina las técnicas de implantes cigomáticos en un entorno práctico y profesional",
+        "home_hero_title_2": "Próxima Residencia",
+        "home_hero_subtitle_2": "Del 2 al 6 de dicimbre",
+        "home_hero_title_3": "Residencia en Implantes Cigomáticos",
+        "home_hero_subtitle_3": "Una alternativa real, segura y técnicamente viable para rehabilitación de maxilares atróficos",
         "home_about_text_1": "Soy médica especializada en diagnóstico por imágenes. Mi trayectoria incluye formación en Medicina Nuclear, estudios internacionales en Tomografía Computada y Resonancia Magnética, así como una dedicación continua a la práctica médica y la docencia. Mi compromiso con la formación de futuros médicos y la mejora de la atención médica ha sido una constante en mi carrera. ¡Aprende más sobre mi historia y contribuciones en el campo de la medicina!",
         "home_about_btn_1": " Ver más",
         "home_services_title_1": "Servicios",
