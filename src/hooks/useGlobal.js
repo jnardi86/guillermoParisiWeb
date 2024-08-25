@@ -2,12 +2,12 @@ import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 
 export const useGlobal = () => {
-    const {
-        mobileView
-    } = useContext(GlobalContext)
+  const { mobileView, directoresRef, scrollToSection } =
+    useContext(GlobalContext);
 
-    return {
-        mobileView
-    };
-}
-
+  return {
+    mobileView,
+    directoresRef,
+    scrollToSection,
+  };
+};

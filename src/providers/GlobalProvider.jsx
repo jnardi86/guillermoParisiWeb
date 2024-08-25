@@ -1,9 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 
 const GlobalProvider = ({ children }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [mobileView, setMobileView] = useState(true);
+
+  const directoresRef = useRef(null);
+
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   useEffect(() => {
     function handleResize() {
@@ -21,6 +27,8 @@ const GlobalProvider = ({ children }) => {
     <GlobalContext.Provider
       value={{
         mobileView,
+        directoresRef,
+        scrollToSection
       }}
     >
       {children}

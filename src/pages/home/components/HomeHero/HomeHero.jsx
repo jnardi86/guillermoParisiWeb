@@ -1,6 +1,5 @@
 import React from "react";
-import "./HomeHero.css";
-import { useGlobal } from "../../../hooks/useGlobal";
+import {useGlobal} from '../../../../hooks/useGlobal'
 import HomeHeroSwiper from "./HomeHeroSwiper";
 
 const HomeHero = () => {

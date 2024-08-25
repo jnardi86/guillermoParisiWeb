@@ -15,7 +15,7 @@ const HomeHeroSlide = ({ imageName, title, subtitle }) => {
       }}
     >
       <div className="w-1/2 h-full flex flex-col justify-center">
-        <h1 className="text-Beige text-[3rem]">{t(title)}</h1>
+        <h1 className="text-Beige font-Montserrat font-Bold text-[3rem]">{t(title)}</h1>
         <h2 className="text-LightGray text-[1.5rem]">{t(subtitle)}</h2>
       </div>
     </div>
