@@ -10,16 +10,14 @@
 .switchLanguage {
     padding: 0;
     border: none;
-    width: 100px;
-
+    width: 80px;
 }
 
 .switchLanguage .select{
-
     display: flex;
     align-items: center;
 }
 
 .imgFlag {
-    width: 30px;
+    width: 20px;
 }

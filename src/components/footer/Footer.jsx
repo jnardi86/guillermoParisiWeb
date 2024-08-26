@@ -1,5 +1,4 @@
 import React from "react";
-import "./footer.css";
 import SwitchLanguage from "../navbar/components/SwitchLanguage";
 import { useTranslation } from "react-i18next";
 import { useGlobal } from "../../hooks/useGlobal";
@@ -8,7 +7,7 @@ const Footer = () => {
   const {directoresRef, scrollToSection} = useGlobal();
   return (
     <footer className="bg-DarkCharcoal text-White py-8">
-      <div className="container mx-auto flex justify-between">
+      <div className="mx-auto flex justify-between">
         {/* Columna 1: Residencia Cigomático */}
         <div>
           <h3 className="text-xl font-bold mb-4">Residencia Cigomático</h3>

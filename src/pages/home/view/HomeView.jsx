@@ -1,5 +1,4 @@
 import React from "react";
-import "./homeView.css";
 import { useTranslation } from "react-i18next";
 import HomeHero from "../components/HomeHero/HomeHero";
 import HomeDirectores from "../components/HomeDirectores";
@@ -18,7 +17,7 @@ const HomeView = () => {
 
   return (
     <div>
-      <HomeHero />
+      {/* <HomeHero />
       <HomeCursoBrief />
       <HomeDirectores />
       <HomeCursoObjetivo />
@@ -28,7 +27,7 @@ const HomeView = () => {
       <HomeCursoPractico />
       <HomeCursoResumen />
       <HomeCursoFechas />
-      <HomeFormInscripcion />
+      <HomeFormInscripcion /> */}
     </div>
   );
 };
