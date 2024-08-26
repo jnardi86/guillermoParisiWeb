@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./navbar.css";
 import NavDesktop from "./components/NavDesktop";
 import NavMobile from "./components/NavMobile";
 import { useGlobal } from "../../hooks/useGlobal";

@@ -1,13 +1,23 @@
 import React from "react";
+import { useGlobal } from "../../../hooks/useGlobal";
+
 
 const HomeCursoObjetivo = () => {
+
+  const { mobileView } = useGlobal()
+
   return (
     <div className="w-3/4 m-auto mt-40 bg-DarkBlue flex rounded-lg shadow-LightShadowGrey">
-      <img
-        className="w-[400px]"
-        src="/images/background_objetivos_1.png"
-        alt=""
-      />
+      {
+        !mobileView && (
+          <img
+          className="w-[400px]"
+          src="/images/background_objetivos_1.png"
+          alt=""
+        />
+        )
+      }
+
       <div className="flex flex-col justify-start items-center p-3">
         <h2 className="text-Beige font-Semibold text-3xl pt-3">Objetivos</h2>
         <p className="font-Monsterrat font-Regular text-center ps-10 pt-10 text-LightGray">

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import '../../navbar/navbar.css';
 import { navItems } from "./navItems"
 import Hamburger from './Hamburger';
 

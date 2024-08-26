@@ -1,11 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../navbar/navbar.css";
 import { navItems } from "./navItems";
 import SwitchLanguage from "./SwitchLanguage";
 import { useTranslation } from "react-i18next";
 import useNavDesktop from "../hooks/useNavDesktop";
-import "../../../../src/styles.css";
 
 const NavDesktop = () => {
   const { alpha } = useNavDesktop();

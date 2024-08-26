@@ -21,26 +21,26 @@ const HomeCursoHighlights = () => {
       </div>
 
       {/* Course Hightligh */}
-      <div className="w-full mt-10 h-[200px] flex flex-wrap">
+      <div className="w-full mt-10 flex flex-wrap">
         {/* Box_1 */}
-        <div className="flex flex-col justify-start items-center bg-TealGreen_1 pt-10 px-2 laptop:w-1/4">
+        <div className="w-full flex flex-col justify-start items-center bg-TealGreen_1 pt-10 px-2 tablet:w-1/2 laptop:w-1/4">
           <p className="text-center font-Bold text-[3rem]">40</p>
           <p className="text-center">horas de cursada teórico-práctico</p>
         </div>
         {/* Box_2 */}
-        <div className="flex flex-col justify-start items-center bg-TealGreen_2 pt-10 px-2 laptop:w-1/4">
+        <div className="w-full flex flex-col justify-start items-center bg-TealGreen_2 pt-10 px-2 tablet:w-1/2 laptop:w-1/4">
           <p className="text-center font-Bold text-[3rem]">5</p>
           <p className="text-center">días de duración</p>
         </div>
         {/* Box_3 */}
-        <div className="flex flex-col justify-start items-center bg-TealGreen_3 pt-10 px-2 laptop:w-1/4">
+        <div className="w-full flex flex-col justify-start items-center bg-TealGreen_3 pt-10 px-2 tablet:w-1/2 laptop:w-1/4">
           <p className="text-center font-Bold text-[3rem]">10+</p>
           <p className="text-center">
             cirugías en vivo con participación activa de los cursantes
           </p>
         </div>
         {/* Box_4 */}
-        <div className="flex flex-col justify-start items-center bg-TealGreen_4 pt-10 px-2 laptop:w-1/4">
+        <div className="w-full flex flex-col justify-start items-center bg-TealGreen_4 pt-10 px-2 tablet:w-1/2 laptop:w-1/4">
           <p className="text-center font-Bold text-[3rem]">4</p>
           <p className="text-center">participantes como máximo</p>
         </div>
