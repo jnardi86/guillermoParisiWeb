@@ -12,36 +12,24 @@ import SwitchLanguage from './SwitchLanguage';
 const NavMobile = () => {
     //Constants for i18n
     const { t } = useTranslation('translation', { keyPrefix: 'navbar' });
-    // const [locale, setLocale] = useState()
 
     const [menuOpen, setMenuOpen] = useState(false);
     const [hamburgerCheckbox, setHamburgerCheckbox] = useState(false);
-
-    //Local Hooks
-    // const handleChange = (event) => setLocale(event.target.value)
-
-    const handleMenuToggle = () => {
-        setMenuOpen(!menuOpen);
-        setHamburgerCheckbox(!hamburgerCheckbox);
-    };
-
-    // useEffect(() => {
-    //     setLocale(i18n.resolvedLanguage);
-    //     console.log("Language detected is: ", i18n.resolvedLanguage)
-    // }, [])
-
-    // useEffect(() => {
-    //     i18n.changeLanguage(locale)
-    // }, [locale])
 
     useEffect(() => {
         menuOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'visible';
     }, [menuOpen]);
 
 
+    const handleMenuToggle = () => {
+        setMenuOpen(!menuOpen);
+        setHamburgerCheckbox(!hamburgerCheckbox);
+    };
+
+
+
     return (
-        <nav>
-            <div className="navMobile--container">
+        <nav className='border-2 border-indigo-600 '>
                 {/* HEADER */}
                 < div className={menuOpen ? "navMobile__header expanded" : "navMobile__header"}>
                     <div className="navMobile__header__content">
@@ -75,7 +63,6 @@ const NavMobile = () => {
                         })}
                     </ul>
                 </div>
-            </div>
         </nav >
     )
 }
