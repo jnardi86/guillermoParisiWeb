@@ -17,7 +17,7 @@ const HomeView = () => {
 
   return (
     <div>
-      {/* <HomeHero />
+      <HomeHero />
       <HomeCursoBrief />
       <HomeDirectores />
       <HomeCursoObjetivo />
@@ -27,7 +27,7 @@ const HomeView = () => {
       <HomeCursoPractico />
       <HomeCursoResumen />
       <HomeCursoFechas />
-      <HomeFormInscripcion /> */}
+      <HomeFormInscripcion />
     </div>
   );
 };

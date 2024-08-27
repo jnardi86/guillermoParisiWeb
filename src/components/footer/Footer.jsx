@@ -7,11 +7,11 @@ const Footer = () => {
   const {directoresRef, scrollToSection} = useGlobal();
   return (
     <footer className="bg-DarkCharcoal text-White py-8">
-      <div className="mx-auto flex justify-between">
+      <div className="flex flex-col tablet:flex-row tablet:justify-between">
         {/* Columna 1: Residencia Cigomático */}
-        <div>
-          <h3 className="text-xl font-bold mb-4">Residencia Cigomático</h3>
-          <ul>
+        <div className="">
+          <h3 className="text-xl font-bold mb-4 mobile:text-center">Residencia Cigomático</h3>
+          <ul className="flex flex-col justify-center items-center">
             <li>
               <button onClick={() => scrollToSection(directoresRef)} className="hover:underline">
                 Directores
@@ -46,14 +46,14 @@ const Footer = () => {
         </div>
 
         {/* Columna 2: Teléfono e Email */}
-        <div>
+        <div className="flex flex-col justify-center items-center mt-4">
           <h3 className="text-xl font-bold mb-4">Teléfono e Email</h3>
           <p>Teléfono: <a href="tel:+1234567890" className="hover:underline">+1 234 567 890</a></p>
           <p>Email: <a href="mailto:info@residenciacigomatico.com" className="hover:underline">info@residenciacigomatico.com</a></p>
         </div>
 
         {/* Columna 3: Pacientes */}
-        <div>
+        <div className="flex flex-col justify-center items-center mt-4">
           <h3 className="text-xl font-bold mb-4">Pacientes</h3>
           <ul>
             <li>

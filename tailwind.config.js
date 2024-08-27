@@ -29,9 +29,11 @@ export default {
         MontserratSubrayada: ["Montserrat Subrayada", "sans-serif"],
       },
       screens: {
-        desktop: "1440px",
-        laptop: "1366px",
-        tablet: "1024px",
+        'mobile': '360px',
+        'tablet': '768px',
+        'laptop1': '1024px',
+        'laptop2': '1366px',
+        'desktop': '1440px',
       },
       boxShadow: {
         LightShadowGrey:

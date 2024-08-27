@@ -13,7 +13,6 @@ const HomeGaleriaSwiper = () => {
   return (
     <Swiper
       loop={true}
-      slidesPerView={5}
       spaceBetween={5}
       centeredSlides={true}
       autoplay={{
@@ -23,6 +22,23 @@ const HomeGaleriaSwiper = () => {
       navigation={true}
       modules={[Autoplay, Pagination, Navigation]}
       className="mySwiper"
+      breakpoints={{
+        320: {
+          slidesPerView: 1, // Para pantallas pequeñas
+        },
+        480: {
+          slidesPerView: 2, // Para pantallas medianas
+        },
+        768: {
+          slidesPerView: 3, // Para pantallas más grandes
+        },
+        1024: {
+          slidesPerView: 4, // Para pantallas de escritorio
+        },
+        1280: {
+          slidesPerView: 5, // Para pantallas muy grandes
+        },
+      }}
     >
       {homeGaleriaItems.map((item) => (
         <SwiperSlide key={item.id}>
