@@ -16,5 +16,5 @@ export const homeHeroItems = [
     imageName: "hero_banner_3.png",
     title: "home_hero_title_3",
     subtitle: "home_hero_subtitle_3",
-  },
+  }
 ];

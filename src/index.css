@@ -10,8 +10,9 @@
 
 @layer components {
     .title-principal {
-        @apply text-Beige font-Montserrat font-Bold text-[1rem] desktop:text-[3rem];
+        @apply text-Beige font-Montserrat font-Bold text-[0.9rem] desktop:text-[3rem];
     }
+
 
     .title-secundary {
         @apply text-LightGray text-[1.5rem];

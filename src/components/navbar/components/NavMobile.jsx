@@ -27,28 +27,34 @@ const NavMobile = () => {
     return (
         <nav className='w-full fixed top-0 left-0 z-50'>
             {/* HEADER */}
-            <div className='h-20 bg-DarkBlue flex justify-between items-center px-5'>
+            <div
+                className='h-20 flex justify-between items-center px-5'
+                style={{
+                    backgroundColor: `rgba(34, 58, 94, ${alpha}`,
+                }}
+            >
                 <div className='z-50'> {/* Asegura que el botón de hamburguesa esté siempre en el frente */}
-                    <Hamburger 
-                        menuOpen={menuOpen} 
-                        setMenuOpen={setMenuOpen} 
-                        hamburgerCheckbox={hamburgerCheckbox} 
-                        setHamburgerCheckbox={setHamburgerCheckbox} 
-                        onClick={handleMenuToggle} 
+                    <Hamburger
+                        menuOpen={menuOpen}
+                        setMenuOpen={setMenuOpen}
+                        hamburgerCheckbox={hamburgerCheckbox}
+                        setHamburgerCheckbox={setHamburgerCheckbox}
+                        onClick={handleMenuToggle}
                     />
                 </div>
-                <div className=''>
+                <div>
                     <h2 className='title-principal text-center'>Residencia Cigomáticos</h2>
                 </div>
-                <div className='z-50'>
-                    <SwitchLanguage />
+                <div className='flex flex-col justify-center items-center'>
+                    <p className='title-principal'>Logo</p>
+                    <div>🦷</div>
                 </div>
             </div>
-            
+
             {/* MENÚ */}
-            <div className={`fixed z-40 top-20 right-0 ${menuOpen ? 'transform translate-x-0' : 'transform translate-x-full'} transition-transform duration-500 ease-in-out w-full h-screen p-9 bg-DarkBlue opacity-90`}>
+            <div className={`fixed z-40 top-0 right-0 ${menuOpen ? 'transform translate-x-0' : 'transform translate-x-full'} transition-transform duration-500 ease-in-out w-full h-screen p-9 bg-DarkBlue`}>
                 {menuOpen && (
-                    <ul className=''>
+                    <ul className='mt-40'>
                         {navItems.map((item, index) => (
                             <li
                                 className='w-full p-3 text-center text-xl font-MontserratAlternate font-Regular text-White gap-5'
@@ -59,8 +65,14 @@ const NavMobile = () => {
                                 </Link>
                             </li>
                         ))}
+                        <li>
+                            <div className=' mt-10 z-50 w-full flex justify-center'>
+                                <SwitchLanguage />
+                            </div>
+                        </li>
                     </ul>
                 )}
+
             </div>
         </nav>
     );

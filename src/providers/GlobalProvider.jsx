@@ -20,7 +20,7 @@ const GlobalProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    setMobileView(windowWidth < 720 ? true : false);
+    setMobileView(windowWidth < 768 ? true : false);
   }, [windowWidth]);
 
   return (

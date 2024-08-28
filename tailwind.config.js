@@ -18,6 +18,7 @@ export default {
       DarkCharcoal: "#1A1A1A",
     },
     fontWeight: {
+      Thin: "100",
       Regular: "400",
       Semibold: "600",
       Bold: "700",
@@ -27,6 +28,8 @@ export default {
         Montserrat: ["Montserrat", "sans-serif"],
         MontserratAlternate: ["Montserrat Alternates", "sans-serif"],
         MontserratSubrayada: ["Montserrat Subrayada", "sans-serif"],
+        Poppins: ["Poppins", "sans-serif"],
+
       },
       screens: {
         'mobile': '360px',
