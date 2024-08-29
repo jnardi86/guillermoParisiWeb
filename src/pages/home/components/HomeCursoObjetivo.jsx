@@ -17,10 +17,9 @@ const HomeCursoObjetivo = () => {
         />
         )
       }
-
       <div className="flex flex-col justify-start items-center p-3">
-        <h2 className="text-Beige font-Semibold text-3xl pt-3">Objetivos</h2>
-        <p className="font-Monsterrat font-Regular text-center ps-10 pt-10 text-LightGray">
+        <h2 className="title-secundary text-Beige pt-3">Objetivos</h2>
+        <p className="font-Poppins text-sm font-Regular text-center py-5  text-LightGray tracking-tight">
           El curso fue dinámicamente diseñado con el objetivo de introducir un
           completo protocolo quirúrgico y protético destinado al uso de
           implantes cigomáticos como alternativa de tratamiento mostrando los

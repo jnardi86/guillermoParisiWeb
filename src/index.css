@@ -10,7 +10,7 @@
 
 @layer components {
     .title-principal {
-        @apply text-Beige font-Montserrat font-Bold text-[0.9rem] desktop:text-[3rem];
+        @apply text-Beige font-Montserrat font-Bold text-[1rem] desktop:text-[3rem];
     }
 
 
