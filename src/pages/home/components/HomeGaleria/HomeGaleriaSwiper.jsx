@@ -16,7 +16,7 @@ const HomeGaleriaSwiper = () => {
   return (
     <>
       <div className="w-full flex items-center justify-center bg-DarkBlue mb-10">
-        <h2 className="title-secundary text-center py-5">La Residencia en fotos</h2>
+        <h2 className="title-sections font-Bold text-White text-center py-5">La Residencia</h2>
       </div>
       <div>
         <Swiper
@@ -46,7 +46,9 @@ const HomeGaleriaSwiper = () => {
           }}
         >
           {homeGaleriaItems.map((item) => (
-            <SwiperSlide key={item.id}>
+            <SwiperSlide 
+            key={item.id}
+            className="flex justify-center items-center">
               <img
                 className="h-[300px]"
                 src={`/images/galeria/${item.imageName}`}

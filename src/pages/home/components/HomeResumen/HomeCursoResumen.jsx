@@ -32,20 +32,20 @@ const HomeCursoResumen = () => {
   ];
 
   return (
-    <div className="w-full tablet:w-3/4 m-auto p-6 mt-20 bg-DarkBlue rounded-lg shadow-lg shadow-LightGray">
-      <h2 className="title-secundary text-Beige pt-3 text-center">
-        La Residencia
+    <div className="w-full m-auto p-6 mt-20 bg-DarkBlue rounded-lg shadow-lg shadow-LightGray tablet:w-[580px]">
+      <h2 className="title-sections font-Bold text-Beige pt-3 text-center">
+        Información
       </h2>
       <div className="flex flex-col items-start">
         {resumenItems.map((item) => (
-          <div key={item.id} className="w-full flex items-center gap-2 my-3 text-LightGray_1 ">
+          <div key={item.id} className="w-full flex items-center gap-2 tablet:gap-4 my-3 text-LightGray_1">
             <div className="w-[50px] flex justify-center">
             {item.icon}
             </div>
               
             <div className="flex flex-col text-left ">
-              <p className="font-Poppins font-Semibold mb-2 text-sm">{item.mainText}</p>
-              {item.subText && <p className="font-Poppins text-sm">{item.subText}</p>}
+              <p className="font-Poppins font-Semibold mb-2 text-sm tablet:text-base">{item.mainText}</p>
+              {item.subText && <p className="font-Poppins text-sm tablet:text-base">{item.subText}</p>}
             </div>
           </div>
         ))}

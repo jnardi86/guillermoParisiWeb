@@ -42,9 +42,6 @@ const NavMobile = () => {
                         onClick={handleMenuToggle}
                     />
                 </div>
-                <div>
-                    <h2 className='title-principal text-center'>Residencia Cigomáticos</h2>
-                </div>
                 <div className='flex flex-col justify-center items-center'>
                     <p className='title-principal'>Logo</p>
                     <div>🦷</div>

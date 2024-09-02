@@ -26,9 +26,9 @@ const HomeDirectores = () => {
       ref={directoresRef}
       className="w-3/4 m-auto bg-White rounded-lg shadow-lg flex flex-col items-center p-5 mt-20"
     >
-      <h1 className="title-secundary text-DarkBlue pb-5 text-center">
+      <h2 className="title-sections font-Bold text-DarkBlue pb-5 text-center">
         Directores
-      </h1>
+      </h2>
 
       <p className="font-Poppins text-center">
         Conoce a los especialistas que lideran este curso de formación, con años

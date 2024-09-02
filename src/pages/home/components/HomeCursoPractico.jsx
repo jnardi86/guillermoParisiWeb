@@ -55,7 +55,7 @@ const HomeCursoPractico = () => {
 
   return (
     <div className="w-full tablet:w-3/4 m-auto mt-20 bg-White rounded-lg shadow-lg">
-      <h2 className="w-full bg-DarkBlue title-secundary py-5 text-center">Actividad Práctica</h2>
+      <h2 className="w-full bg-DarkBlue title-sections font-Bold text-Beige py-5 text-center">Actividad Práctica</h2>
       <ul className="list-none font-Poppins text-sm py-5 ps-2 space-y-2 text-gray-700">
         {/* Mapeamos los objetos del array practicalActivities para crear la lista */}
         {practicalActivities.map((activity) => (

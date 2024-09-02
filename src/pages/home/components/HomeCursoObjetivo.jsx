@@ -7,7 +7,7 @@ const HomeCursoObjetivo = () => {
   const { mobileView } = useGlobal()
 
   return (
-    <div className="w-3/4 m-auto mt-40 bg-DarkBlue flex rounded-lg shadow-LightShadowGrey">
+    <div className="w-full laptop1:w-3/4 m-auto mt-40 bg-DarkBlue flex table:rounded-lg shadow-LightShadowGrey">
       {
         !mobileView && (
           <img
@@ -18,7 +18,7 @@ const HomeCursoObjetivo = () => {
         )
       }
       <div className="flex flex-col justify-start items-center p-3">
-        <h2 className="title-secundary text-Beige pt-3">Objetivos</h2>
+        <h2 className="title-sections font-Bold text-Beige pt-3">Objetivos</h2>
         <p className="font-Poppins text-sm font-Regular text-center py-5  text-LightGray tracking-tight">
           El curso fue dinámicamente diseñado con el objetivo de introducir un
           completo protocolo quirúrgico y protético destinado al uso de

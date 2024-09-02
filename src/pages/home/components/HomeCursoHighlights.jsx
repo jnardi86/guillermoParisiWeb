@@ -30,12 +30,12 @@ const HomeCursoHighlights = () => {
   ];
 
   return (
-    <div className="flex flex-col m-auto w-3/4 mt-20">
+    <div className="w-full flex flex-col m-auto tablet:w-3/4 mt-20">
       <div className="flex flex-col items-center">
-        <h1 className="title-principal text-center pb-5 text-DarkBlue">
+        <h2 className="w-full title-sections font-Bold text-center pb-5 text-DarkBlue">
           Participación Activa en Cirugías en Vivo y Planificación 3D Integral
-        </h1>
-        <p className="text-center pt-5">
+        </h2>
+        <p className="text-center pt-5 px-2">
           Que el cursante tenga una participación activa en el diagnóstico,
           planificación 3D y confección de guías quirúrgicas así como también el
           entendimiento del equipamiento necesario y los Kits de fresas para una

@@ -16,6 +16,9 @@ export default {
       LightGray_1: "#d1d1d1",
       LightGray_2: "#ebebeb",
       DarkCharcoal: "#1A1A1A",
+      Red: "#bd0303",
+      Green: "#48C511"
+      
     },
     fontWeight: {
       Thin: "100",
