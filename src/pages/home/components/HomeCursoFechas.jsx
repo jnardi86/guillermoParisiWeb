@@ -53,7 +53,7 @@ const HomeCursoFechas = () => {
                     // card.booking === "Abierta la Inscripción"
                     //   ? "w-full bg-TealGreen_3 rounded-lg p-5 shadow-LightShadowGrey hover:shadow-TealGreen_3 flex flex-col justify-center items-center"
                     //   : "w-full bg-LightGray_2 rounded-lg p-5 shadow-LightShadowGrey flex flex-col justify-center items-center"
-                    "w-[375px] flex flex-col  justify-center items-center bg-White rounded-2xl shadow-lg text-center border border-solid border-LightGray"
+                    "w-[375px] flex flex-col justify-center items-center bg-White rounded-2xl shadow-lg text-center border border-solid border-LightGray"
 
 
                   }

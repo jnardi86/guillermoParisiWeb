@@ -17,8 +17,9 @@ const NavDesktop = () => {
           backgroundColor: `rgba(34, 58, 94, ${alpha}`,
         }}
       >
-        <div className="bg-Blue p-5 text-White text-2xl">
-          <p>Residencia Cigomáticos</p>
+        <div className=" flex flex-col text-White py-4">
+          <h1 className="font-Poppins font-Semibold text-center text-2xl tablet:text-base tablet:text-start leading-relaxed">Residencia Cigomáticos</h1>
+          <p className="font-Poppins font-Regular text-center text-xl tablet:text-sm tablet:text-center">All On X</p>
         </div>
 
         <div className="flex items-center">
@@ -26,7 +27,7 @@ const NavDesktop = () => {
             {navItems.map((item, index) => {
               return (
                 <li key={index}>
-                  <Link className="text-White p-5" to={item.link}>
+                  <Link className="font-Poppins text-lg font-Regular text-White p-5 tablet:text-base hover:underline hover:text-Beige" to={item.link}>
                     {t(item.label)}
                   </Link>
                 </li>

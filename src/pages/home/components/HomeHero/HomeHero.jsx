@@ -4,6 +4,7 @@ import HomeHeroSwiper from "./HomeHeroSwiper";
 
 const HomeHero = () => {
   const { mobileView } = useGlobal();
+  
   return (
     <>
       <HomeHeroSwiper />

@@ -17,7 +17,7 @@ export default {
       LightGray_2: "#ebebeb",
       DarkCharcoal: "#1A1A1A",
       Red: "#bd0303",
-      Green: "#48C511"
+      Green: "#257402"
       
     },
     fontWeight: {
@@ -32,7 +32,6 @@ export default {
         MontserratAlternate: ["Montserrat Alternates", "sans-serif"],
         MontserratSubrayada: ["Montserrat Subrayada", "sans-serif"],
         Poppins: ["Poppins", "sans-serif"],
-
       },
       screens: {
         'mobile': '360px',

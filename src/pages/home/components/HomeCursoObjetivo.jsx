@@ -17,7 +17,7 @@ const HomeCursoObjetivo = () => {
         />
         )
       }
-      <div className="flex flex-col justify-start items-center p-3">
+      <div className="flex flex-col justify-start laptop1:justify-center items-center p-3">
         <h2 className="title-sections font-Bold text-Beige pt-3">Objetivos</h2>
         <p className="font-Poppins text-sm font-Regular text-center py-5  text-LightGray tracking-tight">
           El curso fue dinámicamente diseñado con el objetivo de introducir un
