@@ -25,8 +25,8 @@ const HomeFormInscripcion = () => {
   };
 
   return (
-    <div className="w-full tablet:w-3/4 m-auto rounded-lg bg-White shadow-lg p-6 mt-20 mb-20">
-      <h2 className="title-sections font-Bold text-DarkBlue font-Semibold pb-5 text-center">
+    <div className="w-full tablet:w-3/4 laptop1:w-1/2 laptop2:w-1/3 m-auto rounded-lg bg-White shadow-lg p-6 mt-20 mb-20">
+      <h2 className="title-sections font-Bold text-DarkBlue pb-5 text-center">
         Contactanos
       </h2>
       <form onSubmit={handleSubmit} className="space-y-4">

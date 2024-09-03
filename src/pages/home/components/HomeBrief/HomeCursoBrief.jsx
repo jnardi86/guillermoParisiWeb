@@ -10,7 +10,7 @@ const HomeCursoBrief = () => {
   return (
     <div className="flex flex-col items-center m-auto w-full tablet:w-3/4 pt-20">
       <h1 className="title-sections font-Bold text-center pb-5 text-DarkBlue">
-        CURSO FORMATIVO EN IMPLANTES CIGOMÁTICOS
+        CURSO FORMATIVO EN IMPLANTES CIGOMÁTICOS ALL ON X
       </h1>
       <div className="flex items-start justify-center">
         {

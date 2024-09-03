@@ -15,7 +15,7 @@ const HomeDirectores = () => {
       imageSrc: "/images/autoridades/fevola.png",
       name: "Dr. Leandro Fevola",
       description:
-        "Especialista en Cirugía BucoMaxiloFacial. Jefe TP Cátedra CBMF II UBA. Atención Odontológica Integral, Chivilcoy. Ortognática-Implantes Cigomáticos",
+        "Especialista en Cirugía BucoMaxiloFacial. Jefe TP Cátedra CBMF II UBA. Atención Odontológica Integral, ciudad de Chivilcoy, Buenos Aires. Ortognática-Implantes Cigomáticos",
     },
   ];
 
@@ -37,7 +37,7 @@ const HomeDirectores = () => {
         {directors.map((director) => (
           <div
             key={director.id}
-            className="flex flex-col items-center w-full py-4 laptop1:w-1/2 border border-solid border-LightGray rounded-lg shadow-xl"
+            className="flex flex-col items-center w-full py-4 laptop1:w-1/2 laptop1:h-[480px] border border-solid border-LightGray rounded-lg shadow-xl"
           >
             <div className="pb-3">
               <img

@@ -18,8 +18,8 @@ const NavDesktop = () => {
         }}
       >
         <div className=" flex flex-col text-White py-4">
-          <h1 className="font-Poppins font-Semibold text-center text-2xl tablet:text-base tablet:text-start leading-relaxed">Residencia Cigomáticos</h1>
-          <p className="font-Poppins font-Regular text-center text-xl tablet:text-sm tablet:text-center">All On X</p>
+          <h1 className="font-Poppins font-Semibold text-center text-2xl tablet:text-base tablet:text-start laptop2:text-2xl leading-relaxed">Residencia Cigomáticos</h1>
+          <p className="font-Poppins font-Regular text-center text-xl tablet:text-sm laptop2:text-xl">All On X</p>
         </div>
 
         <div className="flex items-center">
