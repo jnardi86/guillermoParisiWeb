@@ -20,7 +20,7 @@ const HomeCursoBrief = () => {
             </div>
           )
         }
-        <h2 className="font-Poppins font-Regular text-center text-base tablet:text-xl px-10">
+        <h2 className="font-Poppins font-Regular text-center text-base tablet:text-xl laptop1:text-3xl px-10">
           Nuestro Curso está diseñado para ofrecer una formación integral en la
           rehabilitación de maxilares atróficos desdentados totales o parciales
         </h2>

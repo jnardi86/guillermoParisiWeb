@@ -29,7 +29,7 @@ const HomeHeroSlide = ({ imageName, title, subtitle }) => {
         <h1 className="title-principal font-Bold text-Beige px-2 py-4">
           {t(title)}
         </h1>
-        <p className="font-Poppins text-lg font-Thin text-White px-2">
+        <p className="font-Poppins text-lg font-Thin laptop1:text-2xl text-White px-2">
           {t(subtitle)}
         </p>
       </div>

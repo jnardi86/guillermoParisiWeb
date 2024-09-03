@@ -7,18 +7,25 @@ const HomeDirectores = () => {
       id: 1,
       imageSrc: "/images/autoridades/parisi.png",
       name: "Dr. Guillermo Parisi",
-      description:
-        "Especialista en Cirugía BucoMaxiloFacial Prof. Adjunto Cátedra CBMF II UBA. Jefe Servicio Odontología Hospital Santojanni, CABA. Ortognática-Implantes Cigomáticos",
+      description: {
+        specialty: "Especialista en Cirugía BucoMaxiloFacial",
+        position: "Prof. Adjunto Cátedra CBMF II UBA",
+        role: "Jefe Servicio Odontología Hospital Santojanni, CABA",
+        focus: "Ortognática-Implantes Cigomáticos"
+      }
     },
     {
       id: 2,
       imageSrc: "/images/autoridades/fevola.png",
       name: "Dr. Leandro Fevola",
-      description:
-        "Especialista en Cirugía BucoMaxiloFacial. Jefe TP Cátedra CBMF II UBA. Atención Odontológica Integral, ciudad de Chivilcoy, Buenos Aires. Ortognática-Implantes Cigomáticos",
-    },
+      description: {
+        specialty: "Especialista en Cirugía BucoMaxiloFacial",
+        position: "Jefe TP Cátedra CBMF II UBA",
+        role: "Atención Odontológica Integral, ciudad de Chivilcoy, Buenos Aires",
+        focus: "Ortognática-Implantes Cigomáticos"
+      }
+    }
   ];
-
   const { directoresRef } = useGlobal();
 
   return (
@@ -29,7 +36,7 @@ const HomeDirectores = () => {
       <h2 className="title-sections font-Bold text-DarkBlue pb-5 text-center">
         Directores
       </h2>
-      <p className="font-Poppins text-center">
+      <p className="font-Poppins text-base tablet:text-lg laptop1:text-2xl text-center">
         Conoce a los especialistas que lideran este curso de formación, con años
         de experiencia en la práctica y la enseñanza de la cirugía maxilofacial.
       </p>
@@ -50,13 +57,18 @@ const HomeDirectores = () => {
               <h2 className="title-secundary bg-DarkBlue w-full text-White font-bold text-center">
                 {director.name}
               </h2>
-              <p className="font-Poppins text-DarkBlue text-sm text-center px-4 pt-4 tablet:text-base">
-                {director.description}
-              </p>
+              {/* Lista desordenada para la descripción */}
+              <ul className="font-Poppins text-DarkBlue text-sm text-center px-4 pt-4 tablet:text-base list-none">
+                <li>{director.description.specialty}</li>
+                <li>{director.description.position}</li>
+                <li>{director.description.role}</li>
+                <li>{director.description.focus}</li>
+              </ul>
             </div>
           </div>
         ))}
       </div>
+
     </div>
   );
 };

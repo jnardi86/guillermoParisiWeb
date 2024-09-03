@@ -27,7 +27,7 @@ const NavDesktop = () => {
             {navItems.map((item, index) => {
               return (
                 <li key={index}>
-                  <Link className="font-Poppins text-lg font-Regular text-White p-5 tablet:text-base hover:underline hover:text-Beige" to={item.link}>
+                  <Link className="font-Poppins text-lg font-Regular text-White p-5 tablet:text-base hover:underline hover:text-Beige laptop1:text-2xl" to={item.link}>
                     {t(item.label)}
                   </Link>
                 </li>
