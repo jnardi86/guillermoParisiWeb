@@ -11,6 +11,7 @@ import HomeCursoTeorico from "../components/HomeCursoTeorico";
 import HomeCursoPractico from "../components/HomeCursoPractico";
 import HomeCursoResumen from "../components/HomeResumen/HomeCursoResumen";
 import HomeFormInscripcion from "../components/HomeFormInscripcion";
+import SectionWrapper from "../../../components/sectionWrapper/SectionWrapper";
 
 const HomeView = () => {
   const { t } = useTranslation("translation", { keyPrefix: "home" });
@@ -18,16 +19,47 @@ const HomeView = () => {
   return (
     <div>
       <HomeHero />
-      <HomeCursoBrief />
-      <HomeDirectores />
-      <HomeCursoObjetivo />
-      <HomeCursoHighlights />
-      <HomeCursoTeorico />
-      <HomeGaleria />
-      <HomeCursoPractico />
-      <HomeCursoResumen />
-      <HomeCursoFechas />
-      <HomeFormInscripcion />
+
+      <SectionWrapper>
+        <HomeCursoBrief />
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <HomeDirectores />
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <HomeCursoObjetivo />
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <HomeCursoHighlights />
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <HomeCursoTeorico />
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <HomeGaleria />
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <HomeCursoPractico />
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <HomeCursoResumen />
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <HomeCursoFechas />
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <HomeFormInscripcion />
+      </SectionWrapper>
+
     </div>
   );
 };
