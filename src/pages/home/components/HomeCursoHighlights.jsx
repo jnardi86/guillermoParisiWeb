@@ -35,7 +35,7 @@ const HomeCursoHighlights = () => {
         <h2 className="w-full title-sections font-Bold text-center pb-5 text-DarkBlue">
           Participación Activa en Cirugías en Vivo y Planificación 3D Integral
         </h2>
-        <p className="text-center pt-5 px-2">
+        <p className="text-center text-sm pt-5 px-2 tablet:text-base laptop1:text-lg">
           Que el cursante tenga una participación activa en el diagnóstico,
           planificación 3D y confección de guías quirúrgicas así como también el
           entendimiento del equipamiento necesario y los Kits de fresas para una
@@ -55,8 +55,8 @@ const HomeCursoHighlights = () => {
             key={highlight.id}
             className={`w-full h-44 flex flex-col px-2 justify-center items-center tablet:w-1/2 laptop:w-1/4 ${highlight.bgColor}`}
           >
-            <p className="font-Poppins text-center font-Bold text-[3rem]">{highlight.value}</p>
-            <p className="font-Poppins text-sm text-center">{highlight.description}</p>
+            <p className="font-Poppins text-center font-Bold text-5xl">{highlight.value}</p>
+            <p className="font-Poppins text-sm text-center laptop1:text-base pt-3">{highlight.description}</p>
           </div>
         ))}
       </div>

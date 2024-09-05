@@ -68,7 +68,7 @@ const HomeCursoTeorico = () => {
       <h2 className="w-full title-sections font-Bold text-Beige bg-DarkBlue py-5 px-2 text-center">
         Actividad Teórica sobre Técnica Quirúrgica – Técnica Protésica
       </h2>
-      <ul className="list-none font-Poppins text-sm py-5 ps-2 space-y-2 text-gray-700">
+      <ul className="list-none font-Poppins text-sm py-5 ps-2 space-y-2 text-DarkCharcoal tablet:text-base">
         
         {topics.map((topic) => (
           <li 
