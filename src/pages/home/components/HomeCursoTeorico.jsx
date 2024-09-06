@@ -1,63 +1,67 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 const HomeCursoTeorico = () => {
+
+
+  const { t } = useTranslation ("translation", { keyPrefix: "home" });
 
   const topics = [
     {
       id: 1,
-      text: "Anatomía craneofacial focalizada al hueso malar y su relación a los procesos alveolares maxilares, topografía completa del área de incumbencia quirúrgica.",
+      text: "home_theory_item_1",
     },
     {
       id: 2,
-      text: "Herramientas terapéuticas quirúrgico protéticas para resolución de casos de maxilares atróficos.",
+      text: "home_theory_item_2",
     },
     {
       id: 3,
-      text: "Manejo de implantes no convencionales, técnica all on four.",
+      text: "home_theory_item_3",
     },
     {
       id: 4,
-      text: "Principios biomecánicos de los implantes cigomáticos, uso de minipilares angulados.",
+      text: "home_theory_item_4",
     },
     {
       id: 5,
-      text: "Clasificación anatómica de los maxilares atróficos e indicación quirúrgica correspondiente.",
+      text: "home_theory_item_5",
     },
     {
       id: 6,
-      text: "Uso combinado de implantes cigomáticos con implantes convencionales, principios biomecánicos, distribución y planificación protésica.",
+      text: "home_theory_item_6",
     },
     {
       id: 7,
-      text: "Planificación virtual, estudios solicitados, confección de guías quirúrgicas, impresión 3D, diferentes softwares.",
+      text: "home_theory_item_7",
     },
     {
       id: 8,
-      text: "Implantes cigomáticos unilaterales, indicaciones.",
+      text: "home_theory_item_8",
     },
     {
       id: 9,
-      text: "Resolución de casos complejos.",
+      text: "home_theory_item_9",
     },
     {
       id: 10,
-      text: "Complicaciones, tasa de incidencia, resolución de complicaciones intra y postoperatorias.",
+      text: "home_theory_item_10",
     },
     {
       id: 11,
-      text: "Conceptos básicos de carga inmediata.",
+      text: "home_theory_item_11",
     },
     {
       id: 12,
-      text: "Diseño y confección de prótesis provisional inmediata.",
+      text: "home_theory_item_12",
     },
     {
       id: 13,
-      text: "Aditamentos protésicos, prótesis cigomáticas, transfer, transmucosos, toma de impresiones, técnica convencional y digital.",
+      text: "home_theory_item_13",
     },
     {
       id: 14,
-      text: "Flujo de laboratorio completo convencional y digital.",
+      text: "home_theory_item_14",
     },
   ];
 
@@ -66,15 +70,15 @@ const HomeCursoTeorico = () => {
 
     <div className="w-full tablet:w-3/4 m-auto mt-20 bg-White rounded-lg shadow-lg">
       <h2 className="w-full title-sections font-Bold text-Beige bg-DarkBlue py-5 px-2 text-center">
-        Actividad Teórica sobre Técnica Quirúrgica – Técnica Protésica
+        {t('home_theory_title')}
       </h2>
-      <ul className="list-none font-Poppins text-sm py-5 ps-2 space-y-2 text-DarkCharcoal tablet:text-base">
+      <ul className="list-none text-sections py-5 ps-2 space-y-2 text-DarkCharcoal">
         
         {topics.map((topic) => (
           <li 
           key={topic.id}
           className=' py-2'
-          >✅{topic.text}</li>
+          >✅{t(topic.text)}</li>
         ))}
       </ul>
     </div>
