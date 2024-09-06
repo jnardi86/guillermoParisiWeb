@@ -10,7 +10,8 @@ label {
 }
 
 label span {
-  background: #000;
+  background: #fff;
+  border-style: solid;
   border-radius: 10px;
   height: 2px;
   margin: 6px 0;

@@ -3,7 +3,7 @@ import HomeGaleriaSwiper from "./HomeGaleriaSwiper";
 
 const HomeGaleria = () => {
   return (
-    <div className="w-3/4 m-auto pt-20">
+    <div className="w-full tablet:w-3/4 m-auto pt-20">
       <HomeGaleriaSwiper />
     </div>
   );

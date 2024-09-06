@@ -16,8 +16,12 @@ export default {
       LightGray_1: "#d1d1d1",
       LightGray_2: "#ebebeb",
       DarkCharcoal: "#1A1A1A",
+      Red: "#bd0303",
+      Green: "#257402"
+      
     },
     fontWeight: {
+      Thin: "100",
       Regular: "400",
       Semibold: "600",
       Bold: "700",
@@ -27,11 +31,14 @@ export default {
         Montserrat: ["Montserrat", "sans-serif"],
         MontserratAlternate: ["Montserrat Alternates", "sans-serif"],
         MontserratSubrayada: ["Montserrat Subrayada", "sans-serif"],
+        Poppins: ["Poppins", "sans-serif"],
       },
       screens: {
-        desktop: "1440px",
-        laptop: "1366px",
-        tablet: "1024px",
+        'mobile': '360px',
+        'tablet': '768px',
+        'laptop1': '1024px',
+        'laptop2': '1366px',
+        'desktop': '1440px',
       },
       boxShadow: {
         LightShadowGrey:

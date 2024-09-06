@@ -12,8 +12,6 @@ const GeneralLayout = ({ children }) => {
                 {children}
                 <Footer />
             </LanguageProvider>
-
-
         </div>
     )
 }
