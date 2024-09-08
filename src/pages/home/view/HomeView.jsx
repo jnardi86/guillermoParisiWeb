@@ -10,8 +10,8 @@ import HomeCursoObjetivo from "../components/HomeCursoObjetivo";
 import HomeCursoTeorico from "../components/HomeCursoTeorico";
 import HomeCursoPractico from "../components/HomeCursoPractico";
 import HomeCursoResumen from "../components/HomeResumen/HomeCursoResumen";
-import HomeFormInscripcion from "../components/HomeFormInscripcion";
 import SectionWrapper from "../../../components/sectionWrapper/SectionWrapper";
+import HomeFormView from "../components/HomeFormInscripcion/HomeFormView";
 
 const HomeView = () => {
   const { t } = useTranslation("translation", { keyPrefix: "home" });
@@ -57,7 +57,7 @@ const HomeView = () => {
       </SectionWrapper>
 
       <SectionWrapper>
-        <HomeFormInscripcion />
+        <HomeFormView />
       </SectionWrapper>
 
     </div>
