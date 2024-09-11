@@ -10,7 +10,7 @@ const FormContacto = () => {
   const { t } = useTranslation("translation", { keyPrefix: "home" });
 
   return (
-    <div className="w-full tablet:w-3/4 laptop1:w-1/2 laptop2:w-1/3 m-auto rounded-lg bg-White shadow-lg p-6 mt-20 mb-20">
+    <div className="w-full tablet:w-3/4 laptop1:w-1/2 laptop2:w-1/3 m-auto rounded-lg bg-White shadow-lg p-6 mb-20">
       <h2 className="title-sections font-Bold text-DarkBlue pb-5 text-center">
         {t("home_form_contacto_title")}
       </h2>
