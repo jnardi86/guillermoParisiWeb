@@ -2,6 +2,7 @@ import React from "react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { homeGaleriaItems } from "./HomeGaleriaItems";
+import { useTranslation } from "react-i18next";
 import HomeGaleriaSlide from "./HomeGaleriaSlide";
 
 // Import Swiper styles
@@ -9,14 +10,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+
 const HomeGaleriaSwiper = () => {
 
-
+  const { t } = useTranslation ("translation", { keyPrefix: "home" });
 
   return (
     <>
       <div className="w-full flex items-center justify-center bg-DarkBlue mb-10">
-        <h2 className="title-sections font-Bold text-White text-center py-5">La Residencia</h2>
+        <h2 className="title-sections font-Bold text-White text-center py-5">{t('home_gallery_title')}</h2>
       </div>
       <div>
         <Swiper

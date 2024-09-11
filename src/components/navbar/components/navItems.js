@@ -4,10 +4,6 @@ export const navItems = [
       link: "/",
     },
     {
-      label: "program",
-      link: "/programa",
-    },
-    {
       label: "patients",
       link: "/pacientes",
     }

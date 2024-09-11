@@ -2,17 +2,23 @@ import React from "react";
 import { homeIntroFechas } from "./homeIntroFechas";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { useTranslation } from "react-i18next";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+
 const HomeCursoFechas = () => {
+
+  const { t } = useTranslation ("translation", { keyPrefix: "home" });
+
+
   return (
     <div className="w-full tablet:w-3/4 m-auto my-20 flex flex-col items-center">
       <h2 className="title-sections font-Bold text-center pb-5 text-DarkBlue">
-        Próximas Residencias
+        {t("home_residences_title")}
       </h2>
 
       {/* Carousel de fechas */}
@@ -63,12 +69,12 @@ const HomeCursoFechas = () => {
                     alt={card.imageAlt}  // Una breve descripción de la imagen.
                     className="w-full h-52 object-cover rounded-t-2xl opacity-60" // Ajusta la altura a 40 (o lo que prefieras) y usa 'object-cover' para que la imagen se recorte
                   />
-                  <p className="w-full flex items-center font-Poppins h-14 font-Regular bg-DarkBlue text-White tracking-tight text-lg text-start pl-2">{card.dates}</p>
-                  <p className="font-Poppins h-14  font-Regular text-DarkBlue text-base py-2 mt-8">{card.venue}</p>
+                  <p className="w-full flex items-center font-Poppins h-14 font-Regular bg-DarkBlue text-White tracking-tight text-lg text-start pl-2">{t(card.dates)}</p>
+                  <p className="font-Poppins h-14  font-Regular text-DarkBlue text-base py-2 mt-8">{t(card.venue)}</p>
                   <p
-                    className={`w-3/4 py-2 px-4 mb-6 flex items-center justify-center h-14 font-Poppins font-Semibold text-lg text-White rounded-2xl ${card.booking === "Abierta la Inscripción" ? "bg-Green" : "bg-Red"}`}
+                    className={`w-3/4 py-2 px-4 mb-6 flex items-center justify-center h-14 font-Poppins font-Semibold text-lg text-White rounded-2xl ${t(card.booking) === "Abierta la Inscripción" ? "bg-Green" : "bg-Red"}`}
                   >
-                    {card.booking}
+                    {t(card.booking)}
                   </p>
                 </div>
               </SwiperSlide>

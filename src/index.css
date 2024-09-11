@@ -21,5 +21,9 @@
     .title-sections {
         @apply font-Poppins text-4xl tablet:text-5xl
     }
+
+    .text-sections {
+        @apply font-Poppins text-base tablet:text-lg laptop1:text-xl
+    }
 }
 
