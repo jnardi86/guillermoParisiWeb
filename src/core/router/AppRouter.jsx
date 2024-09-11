@@ -2,9 +2,8 @@ import React from 'react'
 import { createHashRouter } from "react-router-dom";
 import GeneralLayout from '../layouts/GeneralLayout';
 import HomeView from '../../pages/home/view/HomeView';
-import ServicesView from '../../pages/services/view/ServicesView';
-import AboutView from '../../pages/about/view/AboutView';
-import ContactView from '../../pages/contact/view/ContactView';
+import ProgramaView from '../../pages/programa/view/ProgramaView';
+import PacientesView from '../../pages/pacientes/view/PacientesView';
 
 
 export const appRouter = createHashRouter([
@@ -14,34 +13,22 @@ export const appRouter = createHashRouter([
             <GeneralLayout>
                 <HomeView />
             </GeneralLayout>
-
         ),
     },
     {
-        path: "/services",
+        path: "/programa",
         element: (
             <GeneralLayout>
-                <ServicesView />
+                <ProgramaView />
             </GeneralLayout>
-
         ),
     },
     {
-        path: "/about",
+        path: "/pacientes",
         element: (
             <GeneralLayout>
-                <AboutView />
+                <PacientesView />
             </GeneralLayout>
-
-        ),
-    },
-    {
-        path: "/contact",
-        element: (
-            <GeneralLayout>
-                <ContactView />
-            </GeneralLayout>
-
         ),
     },
 ]);

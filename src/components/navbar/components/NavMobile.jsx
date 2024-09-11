@@ -1,83 +1,78 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../../navbar/navbar.css';
-import { navItems } from "./navItems"
+import { navItems } from "./navItems";
 import Hamburger from './Hamburger';
-
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next';
 import i18n from "../../../core/config/i18n";
 import SwitchLanguage from './SwitchLanguage';
-
+import useNavDesktop from '../hooks/useNavDesktop';
 
 const NavMobile = () => {
-    //Constants for i18n
+    // Constants for i18n
     const { t } = useTranslation('translation', { keyPrefix: 'navbar' });
-    // const [locale, setLocale] = useState()
 
     const [menuOpen, setMenuOpen] = useState(false);
     const [hamburgerCheckbox, setHamburgerCheckbox] = useState(false);
+    const { alpha } = useNavDesktop();
 
-    //Local Hooks
-    // const handleChange = (event) => setLocale(event.target.value)
+    useEffect(() => {
+        menuOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'visible';
+    }, [menuOpen]);
 
     const handleMenuToggle = () => {
         setMenuOpen(!menuOpen);
         setHamburgerCheckbox(!hamburgerCheckbox);
     };
 
-    // useEffect(() => {
-    //     setLocale(i18n.resolvedLanguage);
-    //     console.log("Language detected is: ", i18n.resolvedLanguage)
-    // }, [])
-
-    // useEffect(() => {
-    //     i18n.changeLanguage(locale)
-    // }, [locale])
-
-    useEffect(() => {
-        menuOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'visible';
-    }, [menuOpen]);
-
-
     return (
-        <nav>
-            <div className="navMobile--container">
-                {/* HEADER */}
-                < div className={menuOpen ? "navMobile__header expanded" : "navMobile__header"}>
-                    <div className="navMobile__header__content">
-                        <div>
-                            <Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} hamburgerCheckbox={hamburgerCheckbox} setHamburgerCheckbox={setHamburgerCheckbox} />
-                        </div>
-                        <div>
-                            <p className='titleSec3'>Dra. María Elena Levín</p>
-                        </div>
-                        <SwitchLanguage />
-                        {/* <div>
-                            <select value={locale} onChange={handleChange}>
-                                <option value="es">Español</option>
-                                <option value="en">English</option>
-                            </select>
-                        </div> */}
-                    </div>
+        <nav className='w-full fixed top-0 left-0 z-50'>
+            {/* HEADER */}
+            <div
+                className='h-20 flex justify-between items-center px-5'
+                style={{
+                    backgroundColor: `rgba(34, 58, 94, ${alpha}`,
+                }}
+            >
+                <div className='z-50'> {/* Asegura que el botón de hamburguesa esté siempre en el frente */}
+                    <Hamburger
+                        menuOpen={menuOpen}
+                        setMenuOpen={setMenuOpen}
+                        hamburgerCheckbox={hamburgerCheckbox}
+                        setHamburgerCheckbox={setHamburgerCheckbox}
+                        onClick={handleMenuToggle}
+                    />
                 </div>
-
-
-                <div className={menuOpen ? "navMobile__body visible" : "navMobile__body"}>
-
-                    <ul>
-                        {navItems.map((item, index) => {
-                            return (
-                                <li key={index}>
-                                    {/* < Link className="linkTo textLinks" to={item.link} onClick={handleMenuToggle} >{item.label}</Link> */}
-                                    < Link className="linkTo textLinks" to={item.link} onClick={handleMenuToggle} >{t(item.label)}</Link>
-                                </li>
-                            )
-                        })}
-                    </ul>
+                <div className='flex flex-col justify-center items-center'>
+                    <p className='title-principal'>Logo</p>
+                    <div>🦷</div>
                 </div>
             </div>
-        </nav >
-    )
+
+            {/* MENÚ */}
+            <div className={`fixed z-40 top-0 right-0 ${menuOpen ? 'transform translate-x-0' : 'transform translate-x-full'} transition-transform duration-500 ease-in-out w-full h-screen p-9 bg-DarkBlue`}>
+                {menuOpen && (
+                    <ul className='mt-40'>
+                        {navItems.map((item, index) => (
+                            <li
+                                className='w-full p-3 text-center text-xl font-MontserratAlternate font-Regular text-White gap-5'
+                                key={index}
+                            >
+                                <Link className="linkTo textLinks" to={item.link} onClick={handleMenuToggle}>
+                                    {t(item.label)}
+                                </Link>
+                            </li>
+                        ))}
+                        <li>
+                            <div className=' mt-10 z-50 w-full flex justify-center'>
+                                <SwitchLanguage />
+                            </div>
+                        </li>
+                    </ul>
+                )}
+
+            </div>
+        </nav>
+    );
 }
 
-export default NavMobile
+export default NavMobile;

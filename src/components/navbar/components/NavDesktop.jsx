@@ -1,36 +1,44 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import '../../navbar/navbar.css';
-import { navItems } from "./navItems"
-import SwitchLanguage from './SwitchLanguage';
-import { useTranslation } from 'react-i18next';
-import "../../../../src/styles.css"
+import React from "react";
+import { Link } from "react-router-dom";
+import { navItems } from "./navItems";
+import SwitchLanguage from "./SwitchLanguage";
+import { useTranslation } from "react-i18next";
+import useNavDesktop from "../hooks/useNavDesktop";
 
 const NavDesktop = () => {
-
-  const { t } = useTranslation('translation', { keyPrefix: 'navbar' });
+  const { alpha } = useNavDesktop();
+  const { t } = useTranslation("translation", { keyPrefix: "navbar" });
 
   return (
-    <nav>
-      <div className="navDesktop--container">
-        <div className="navDesktop__logo">
-          <p className='titlePri3'><strong>Dra.</strong> María Elena<strong> Levín</strong></p>
+    <nav className="fixed top-0 left-0 w-full z-50">
+      <div
+        className="flex justify-between items-center px-5"
+        style={{
+          backgroundColor: `rgba(34, 58, 94, ${alpha}`,
+        }}
+      >
+        <div className=" flex flex-col text-White py-4">
+          <h1 className="font-Poppins font-Semibold text-center text-2xl tablet:text-base tablet:text-start laptop2:text-2xl leading-relaxed">Residencia Cigomáticos</h1>
+          <p className="font-Poppins font-Regular text-center text-xl tablet:text-sm laptop2:text-xl">All On X</p>
         </div>
-        <div className="navDesktop__links">
-          <ul>
+
+        <div className="flex items-center">
+          <ul className="flex space-x-4">
             {navItems.map((item, index) => {
               return (
                 <li key={index}>
-                  <Link className="linkTo textLinks" to={item.link}>{t(item.label)}</Link></li>
-              )
+                  <Link className="font-Poppins text-lg font-Regular text-White p-5 tablet:text-base hover:underline hover:text-Beige laptop1:text-2xl" to={item.link}>
+                    {t(item.label)}
+                  </Link>
+                </li>
+              );
             })}
           </ul>
-          <SwitchLanguage/>
         </div>
-
+        <SwitchLanguage />
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default NavDesktop
+export default NavDesktop;
