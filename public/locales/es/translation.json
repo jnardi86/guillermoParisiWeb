@@ -107,6 +107,26 @@
         "home_residences_card4_alt":"Residencia",
         "home_residences_card4_date":"2 al 6 de Diciembre",
         "home_residences_card4_venue":"Buenos Aires, Argentina",
-        "home_residences_card4_booking":"Abierta la Inscripción"
+        "home_residences_card4_booking":"Abierta la Inscripción",
+        "home_form_contacto_title" : "Contactanos",
+        "home_form_contacto_name" : "Nombre",
+        "home_form_contacto_lastname" : "Apellido",
+        "home_form_contacto_email" : "Email",
+        "home_form_contacto_country" : "País",
+        "home_form_contacto_question" : "Consulta",
+        "home_form_contacto_send" : "Enviar",
+        "home_form_contacto_sending" : "Enviando",
+        "home_form_inscription_title" : "Pre-inscripción",
+        "home_form_inscription_name" : "Nombre",
+        "home_form_inscription_lastname" : "Apellido",
+        "home_form_inscription_email" : "Email",
+        "home_form_inscription_tel" : "Teléfono",
+        "home_form_inscription_country" : "País",
+        "home_form_inscription_courseDate" : "Fecha del curso",
+        "home_form_inscription_selectDate" : "Selecciona una fecha",
+        "home_form_inscription_date1" : "2 al 6 de Diciembre 2024",
+        "home_form_inscription_comments" : "Comentarios",
+        "home_form_inscription_send" : "Enviar",
+        "home_form_inscription_sending" : "Enviando"
     }
 }
