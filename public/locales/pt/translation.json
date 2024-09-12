@@ -108,6 +108,7 @@
     "home_residences_card4_date": "2 a 6 de Dezembro",
     "home_residences_card4_venue": "Buenos Aires, Argentina",
     "home_residences_card4_booking": "Inscrições Abertas",
+    "home_residences_cards_open_registration":"Inscrições Abertas",
     "home_form_contacto_title": "Consulta",
     "home_form_contacto_toggle": "Selecione para entrar em contato conosco",
     "home_form_contacto_name": "Nome",
@@ -129,5 +130,10 @@
     "home_form_inscription_comments": "Comentários",
     "home_form_inscription_send": "Enviar",
     "home_form_inscription_sending": "Enviando"
+  },
+  "patients": {
+      "patients_title": "INFORMAÇÕES PARA PACIENTES EM BREVE",
+      "patients_text": ""
+
   }
 }

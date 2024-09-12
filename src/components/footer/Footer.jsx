@@ -53,7 +53,7 @@ const Footer = () => {
                 height={"20px"}
                 color={"#fff"}
               />
-              <a href="https://www.instagram.com/parisiguille/" target="_blank" className="pl-2 hover:underline">{t('section_two_item4')}</a>
+              <a href="https://www.instagram.com/atencionodontologicaintegral/" target="_blank" className="pl-2 hover:underline">{t('section_two_item4')}</a>
             </p>
           </div>
           <p className="w-full flex justify-center items-center font-Poppins font-Thin text-sm py-3 tablet:py-1 tablet:text-base">

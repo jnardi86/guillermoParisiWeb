@@ -72,7 +72,7 @@ const HomeCursoFechas = () => {
                   <p className="w-full flex items-center font-Poppins h-14 font-Regular bg-DarkBlue text-White tracking-tight text-lg text-start pl-2">{t(card.dates)}</p>
                   <p className="font-Poppins h-14  font-Regular text-DarkBlue text-base py-2 mt-8">{t(card.venue)}</p>
                   <p
-                    className={`w-3/4 py-2 px-4 mb-6 flex items-center justify-center h-14 font-Poppins font-Semibold text-lg text-White rounded-2xl ${t(card.booking) === "Abierta la Inscripción" ? "bg-Green" : "bg-Red"}`}
+                    className={`w-3/4 py-2 px-4 mb-6 flex items-center justify-center h-14 font-Poppins font-Semibold text-lg text-White rounded-2xl ${t(card.booking) === t('home_residences_cards_open_registration') ? "bg-Green" : "bg-Red"}`}
                   >
                     {t(card.booking)}
                   </p>
