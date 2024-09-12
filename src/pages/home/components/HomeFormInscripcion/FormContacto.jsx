@@ -2,12 +2,17 @@ import React, { useState } from "react";
 import TextInputComponent from "../../../../components/Form/TextInputComponent";
 import { useFormContacto } from "./useFormContacto";
 import { useTranslation } from "react-i18next";
+import countryList from "react-select-country-list";
 
 const FormContacto = () => {
   const { formData, handleChange, handleSubmitContacto, isSubmitting } =
     useFormContacto();
 
   const { t } = useTranslation("translation", { keyPrefix: "home" });
+
+  // Obtener la lista de países
+  const countryOptions = countryList().getData();
+  
 
   return (
     <div className="w-full tablet:w-3/4 laptop1:w-1/2 laptop2:w-1/3 m-auto rounded-lg bg-White shadow-lg p-6 mb-20">
@@ -38,12 +43,42 @@ const FormContacto = () => {
           value={formData.email}
           onChange={handleChange}
         />
-        <TextInputComponent
+        {/* <TextInputComponent
           id="pais"
           label={t("home_form_contacto_country")}
           value={formData.pais}
           onChange={handleChange}
-        />
+        /> */}
+        <div>
+          <label
+            className="w-full block font-Poppins text-base text-DarkBlue font-Semibold mb-2"
+            htmlFor="pais"
+          >
+            {t("home_form_inscription_country")}
+          </label>
+          <select
+            id="pais"
+            name="pais"
+            value={formData.pais}
+            onChange={handleChange} // El mismo handler que usas para los otros inputs
+            required
+            className="w-full p-3 bg-LightGray_2 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-600"
+          >
+            <option className="font-Poppins text-base" value="" disabled>
+              {t("home_form_inscription_country")}
+            </option>
+            {/* Mapear las opciones de países */}
+            {countryOptions.map((country) => (
+              <option
+                key={country.value}
+                className="font-Poppins text-base"
+                value={country.label}
+              >
+                {country.label}
+              </option>
+            ))}
+          </select>
+        </div>
 
         <div>
           <label

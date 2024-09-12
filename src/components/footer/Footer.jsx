@@ -69,6 +69,10 @@ const Footer = () => {
         <FooterSection title={t('section_three_title')}>
           <ul className="flex flex-col items-center font-Poppins font-Thin text-base py-3">
             <FooterLink
+              label={t('section_three_info')}
+              onClick={() => scrollToSection(refs.informacionRef)}
+            />
+            {/* <FooterLink
               label={t('section_three_item1')}
               onClick={() => scrollToSection(refs.informacionRef)}
             />
@@ -83,7 +87,7 @@ const Footer = () => {
             <FooterLink
               label={t('section_three_item4')}
               onClick={() => scrollToSection(refs.faqRef)}
-            />
+            /> */}
           </ul>
         </FooterSection>
       </div>
