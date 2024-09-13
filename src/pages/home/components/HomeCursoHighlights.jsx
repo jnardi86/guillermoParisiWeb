@@ -26,7 +26,7 @@ const HomeCursoHighlights = () => {
     },
     {
       id: 4,
-      value: "4",
+      value: "8",
       description: "home_highlights_fourth_quadrant",
       bgColor: "bg-TealGreen_4", // Clase de color de fondo
     },
