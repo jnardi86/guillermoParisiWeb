@@ -6,11 +6,10 @@ import { useTranslation } from 'react-i18next';
 import i18n from "../../../core/config/i18n";
 import SwitchLanguage from './SwitchLanguage';
 import useNavDesktop from '../hooks/useNavDesktop';
+import LogoIcon from '../../icons/LogoIcon';
 
 const NavMobile = () => {
-    // Constants for i18n
     const { t } = useTranslation('translation', { keyPrefix: 'navbar' });
-
     const [menuOpen, setMenuOpen] = useState(false);
     const [hamburgerCheckbox, setHamburgerCheckbox] = useState(false);
     const { alpha } = useNavDesktop();
@@ -33,7 +32,7 @@ const NavMobile = () => {
                     backgroundColor: `rgba(34, 58, 94, ${alpha}`,
                 }}
             >
-                <div className='z-50'> {/* Asegura que el botón de hamburguesa esté siempre en el frente */}
+                <div className='z-50'>
                     <Hamburger
                         menuOpen={menuOpen}
                         setMenuOpen={setMenuOpen}
@@ -43,8 +42,7 @@ const NavMobile = () => {
                     />
                 </div>
                 <div className='flex flex-col justify-center items-center'>
-                    <p className='title-principal'>Logo</p>
-                    <div>🦷</div>
+                    <LogoIcon width="40" height="40" color='#fff' />
                 </div>
             </div>
 
@@ -63,16 +61,16 @@ const NavMobile = () => {
                             </li>
                         ))}
                         <li>
-                            <div className=' mt-10 z-50 w-full flex justify-center'>
+                            <div className='mt-10 z-50 w-full flex justify-center'>
                                 <SwitchLanguage />
                             </div>
                         </li>
                     </ul>
                 )}
-
             </div>
         </nav>
     );
 }
 
 export default NavMobile;
+
