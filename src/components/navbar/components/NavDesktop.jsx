@@ -4,6 +4,7 @@ import { navItems } from "./navItems";
 import SwitchLanguage from "./SwitchLanguage";
 import { useTranslation } from "react-i18next";
 import useNavDesktop from "../hooks/useNavDesktop";
+import LogoIcon from "../../icons/LogoIcon";
 
 const NavDesktop = () => {
   const { alpha } = useNavDesktop();
@@ -17,8 +18,12 @@ const NavDesktop = () => {
           backgroundColor: `rgba(34, 58, 94, ${alpha}`,
         }}
       >
-        <div className=" flex flex-col text-White py-4">
-          <h1 className="font-Poppins font-Semibold text-center text-2xl tablet:text-base tablet:text-start laptop2:text-2xl leading-relaxed">{t('title')}</h1>
+        <div className=" flex flex-col justify-center items-center text-White py-4">
+          <div className="flex gap-3">
+            <h1 className="font-Poppins font-Semibold text-center text-2xl tablet:text-base tablet:text-start laptop2:text-2xl leading-relaxed">{t('title')}</h1>
+            <LogoIcon width="30" height="30" color='#fff' />
+          </div>
+
           <h2 className="font-Poppins font-Regular text-center text-xl tablet:text-sm laptop2:text-xl">{t('subtitle')}</h2>
         </div>
 
