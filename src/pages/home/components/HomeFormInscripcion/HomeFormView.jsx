@@ -19,13 +19,16 @@ const HomeFormView = () => {
             checked={isToggled}
             onChange={onToggle}
             className="sr-only peer"
+            disabled
           />
           <div className="w-full h-full bg-DarkCharcoal rounded-full peer-checked:bg-Beige transition-colors"></div>
           <div className="absolute left-1 top-1 w-6 h-6 bg-White rounded-full transition-transform peer-checked:translate-x-8"></div>
         </label>
       </div>
 
-      {isToggled ? <FormInscripcion /> : <FormContacto />}
+      {/* {isToggled ? <FormInscripcion /> : <FormContacto />} */}
+      {/* Renderizar únicamente FormContacto */}
+      <FormContacto />
     </div>
   );
 };

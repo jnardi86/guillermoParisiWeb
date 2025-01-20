@@ -30,8 +30,8 @@
   "home": {
     "home_hero_title_1": "Residenza in Impianti Zigomatici All on X",
     "home_hero_subtitle_1": "Formazione avanzata per specialisti in chirurgia maxillofacciale. Domina le tecniche di impianti zigomatici in un ambiente pratico e professionale",
-    "home_hero_title_2": "Prossima Residenza",
-    "home_hero_subtitle_2": "Dal 2 al 6 dicembre",
+    "home_hero_title_2": "Residenza in Impianti Zigomatici All on X",
+    "home_hero_subtitle_2": "Presto maggiori informazioni sulle date disponibili.",
     "home_hero_title_3": "Residenza in Impianti Zigomatici All on X",
     "home_hero_subtitle_3": "Una vera alternativa, sicura e tecnicamente fattibile per la riabilitazione di mascellari atrofici",
     "home_brief_title": "CORSO FORMATIVO IN IMPIANTI ZIGOMATICI ALL ON X",
@@ -71,7 +71,7 @@
     "home_theory_item_12": "Progettazione e realizzazione di una protesi provvisoria immediata.",
     "home_theory_item_13": "Componenti protesici, protesi zigomatiche, trasferimenti, transmucose, rilevamento di impronte, tecnica convenzionale e digitale.",
     "home_theory_item_14": "Flusso completo di laboratorio convenzionale e digitale.",
-    "home_gallery_title": "La Residenza",
+    "home_gallery_title": "La Residenza 2024",
     "home_practice_title": "Attività Pratica",
     "home_practice_item_1": "Workshop su kit chirurgico e protesico, fresatura di modelli in resina ottenuti tramite tomografie.",
     "home_practice_item_2": "Riconoscimento di strumenti e analoghi di impianti zigomatici, misure, angolazioni.",
@@ -109,7 +109,8 @@
     "home_residences_card4_date": "Dal 2 al 6 dicembre",
     "home_residences_card4_venue": "Buenos Aires, Argentina",
     "home_residences_card4_booking": "Iscrizioni Aperte",
-    "home_residences_cards_open_registration":"Iscrizioni Aperte",
+    "home_residences_cards_open_registration": "Iscrizioni Aperte",
+    "home_residences_no_dates_message": "Presto aggiorneremo le informazioni sulle nuove date per la residenza di zigomatici.",
     "home_form_contacto_title": "Consultazione",
     "home_form_contacto_toggle": "Seleziona per contattarci",
     "home_form_contacto_name": "Nome",
@@ -132,9 +133,8 @@
     "home_form_inscription_send": "Invia",
     "home_form_inscription_sending": "Invio in corso"
   },
-    "patients": {
-        "patients_title": "INFORMAZIONI PER I PAZIENTI IN ARRIVO",
-        "patients_text": "Pacientes"
-
-    }
+  "patients": {
+    "patients_title": "INFORMAZIONI PER I PAZIENTI IN ARRIVO",
+    "patients_text": "Pacientes"
+  }
 }
