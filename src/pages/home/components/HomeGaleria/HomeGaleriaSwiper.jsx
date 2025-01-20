@@ -52,7 +52,7 @@ const HomeGaleriaSwiper = () => {
             key={item.id}
             className="flex justify-center items-center">
               <img
-                className="h-[300px]"
+                className="w-full h-[300px] object-cover"
                 src={`/images/galeria/${item.imageName}`}
                 alt="Imagen"
               />
