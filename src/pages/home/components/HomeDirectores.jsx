@@ -2,11 +2,12 @@ import React from "react";
 import { useGlobal } from "../../../hooks/useGlobal";
 import ListIcon from "../../../components/icons/ListIcon";
 import { useTranslation } from "react-i18next";
+import Swal from "sweetalert2";
 
 const HomeDirectores = () => {
 
   const { directoresRef } = useGlobal();
-  const { t } = useTranslation ("translation", { keyPrefix: "home" });
+  const { t } = useTranslation("translation", { keyPrefix: "home" });
 
   const directors = [
     {
@@ -33,37 +34,76 @@ const HomeDirectores = () => {
     }
   ];
 
- 
+
+  // Función para mostrar el modal con información detallada
+  const showDirectorInfo = (director) => {
+    Swal.fire({
+      title: `<h2 class="font-Poppins text-3xl font-ExtraBold text-Black">${t(director.name)}</h2>`,
+      html: `
+        <div class="flex flex-col items-center">
+          <img src="${director.imageSrc}" alt="${t(director.name)}" class="w-40 h-40 rounded-full mb-4 shadow-lg" />
+          <ul class="font-Poppins text-lg text-Black text-start space-y-2 list-none">
+            <li class="flex gap-2 w-full items-center font-Semibold text-center">
+              ${t(director.description.speciality)}
+            </li>
+            <li class="flex gap-2 items-center">
+              ${t(director.description.position)}
+            </li>
+            <li class="flex gap-2 items-center">
+              ${t(director.description.role)}
+            </li>
+            <li class="flex gap-2 items-center">
+              ${t(director.description.focus)}
+            </li>
+          </ul>
+        </div>
+      `,
+      showCloseButton: true,
+      confirmButtonText: "Cerrar",
+      confirmButtonColor: "#3956dd",
+      customClass: {
+        popup: "w-auto max-w-lg",
+        title: "font-Poppins text-Black",
+        confirmButton: "font-Poppins text-white",
+      }
+    });
+  };
 
   return (
     <div
       ref={directoresRef}
-      className="w-full tablet:w-3/4 m-auto bg-White rounded-lg shadow-lg flex flex-col items-center p-5 pb-10 mt-20"
+      className="w-full tablet:w-3/4 mx-auto bg-White rounded-lg flex flex-col items-center p-5 pb-10 mt-20"
     >
-      <h2 className="title-sections font-Bold text-DarkBlue pb-5 text-center">
+      <h2 className="font-Poppins text-center text-5xl font-ExtraBold text-Black mb-4">
         {t("home_directors_title")}
       </h2>
-      <p className="text-sections text-center">
+      <p className="font-Poppins text-Black font-Regular text-xl text-start laptop2:text-2xl mb-4 px-5 tablet:text-center">
         {t("home_directors_text")}
       </p>
-      <div className="flex flex-col items-center justify-around flex-wrap pt-10 gap-10 laptop1:flex-row laptop1:flex-nowrap laptop1:justify-start laptop1:gap-5">
+      <div className="flex flex-col items-center justify-around flex-wrap pt-10 gap-10 laptop1:w-full laptop1:flex-row laptop1:flex-nowrap laptop1:justify-center laptop1:gap-5">
         {directors.map((director) => (
           <div
             key={director.id}
-            className="flex flex-col items-center w-full py-4 laptop1:w-1/2 laptop1:h-[480px] border border-solid border-LightGray rounded-lg shadow-xl"
+            className="flex flex-col items-center w-full laptop1:w-1/2 laptop1:h-[480px]"
           >
+            <h2 className="font-Poppins text-center text-3xl font-ExtraBold text-Black px-4 py-2 mb-2">
+              {t(director.name)}
+            </h2>
             <div className="pb-3">
               <img
-                className="rounded-full w-[150px] h-[150px] laptop1:w-[200px] laptop1:h-[200px] laptop1:hover:filter laptop1:hover:grayscale laptop1:hover:transition laptop1:hover:duration-300"
+                className="rounded-full w-[200px] h-[200px] tablet:w-[300px] tablet:h-[300px] laptop1:hover:filter laptop1:hover:grayscale laptop1:hover:transition laptop1:hover:duration-300"
                 src={director.imageSrc}
                 alt={t(director.name)}
               />
             </div>
-            <div className="flex flex-col items-center justify-center mt-10 w-full">
-              <h2 className="title-secundary bg-DarkBlue w-full text-White font-bold text-center">
-              {t(director.name)}
-              </h2>
-              {/* Mapeo de la lista con ListIcon */}
+            <button
+              className="mt-6 bg-Blue text-White font-Poppins text-xl font-Semibold py-2 px-6 rounded-lg transition-all hover:bg-White hover:text-Blue hover:border hover:border-solid hover:border-1 hover:border-Blue"
+              onClick={() => showDirectorInfo(director)}
+            >
+              Conocé más
+            </button>
+
+            {/* <div className="flex flex-col items-center justify-center w-full">
               <ul className="font-Poppins text-DarkBlue text-sm text-start w-full px-2 pt-4 tablet:text-base list-none">
                 {Object.values(director.description).map((desc, index) => (
                   <li key={index} className="flex gap-1 items-center">
@@ -74,7 +114,7 @@ const HomeDirectores = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

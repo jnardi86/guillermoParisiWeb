@@ -16,7 +16,7 @@ const Footer = () => {
   const homeSections = ["section_one_item1", "section_one_item2", "section_one_item3", "section_one_item4", "section_one_item5", "section_one_item6"]
 
   return (
-    <footer className="bg-DarkCharcoal text-White py-8 flex flex-col">
+    <footer className="bg-DarkBlue mt-20 text-White py-8 flex flex-col">
       <div className="flex flex-col tablet:flex-row tablet:justify-between">
 
         {/* Columna 1: Residencia Cigomático */}

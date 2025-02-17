@@ -10,7 +10,7 @@ const useNavDesktop = () => {
     if (typeof window !== "undefined") {
       const handleScroll = () => {
         calcAlpha = window.scrollY;
-        console.log(calcAlpha);
+        // console.log(calcAlpha);
         calcAlpha = 0 + (2 * calcAlpha) / SCROLL_BREAK;
         setAlpha(calcAlpha > 1 ? 1 : calcAlpha);
       };

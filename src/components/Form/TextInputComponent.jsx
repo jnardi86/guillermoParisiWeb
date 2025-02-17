@@ -4,7 +4,7 @@ const TextInputComponent = ({ id, label, type = "text", value, onChange }) => {
   return (
     <div>
       <label
-        className="block font-Poppins text-base text-DarkBlue font-Semibold mb-2"
+        className="block font-Poppins text-xl text-White font-Regular mb-2"
         htmlFor={id}
       >
         {label}
@@ -16,7 +16,7 @@ const TextInputComponent = ({ id, label, type = "text", value, onChange }) => {
         value={value}
         onChange={onChange}
         required
-        className="w-full p-3 bg-LightGray_2 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-600"
+        className="w-full p-3 bg-White font-Poppins text-Black text-lg rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-600"
       />
     </div>
   );

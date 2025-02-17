@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import i18n from "../../../core/config/i18n";
 import SwitchLanguage from './SwitchLanguage';
 import useNavDesktop from '../hooks/useNavDesktop';
-import LogoIcon from '../../icons/LogoIcon';
+
 
 const NavMobile = () => {
     const { t } = useTranslation('translation', { keyPrefix: 'navbar' });
@@ -29,7 +29,8 @@ const NavMobile = () => {
             <div
                 className='h-20 flex justify-between items-center px-5'
                 style={{
-                    backgroundColor: `rgba(34, 58, 94, ${alpha}`,
+                    // backgroundColor: `rgba(34, 58, 94, ${alpha}`,
+                    backgroundColor: `rgba(57, 86, 221, ${alpha})`,
                 }}
             >
                 <div className='z-50'>
@@ -42,17 +43,18 @@ const NavMobile = () => {
                     />
                 </div>
                 <div className='flex flex-col justify-center items-center'>
-                    <LogoIcon width="40" height="40" color='#fff' />
+                    <img src="/images/logos/white.png" alt="Logo Residencia" width={70} height={70} />
+                    {/* <LogoIcon width="40" height="40" color='#fff' /> */}
                 </div>
             </div>
 
             {/* MENÚ */}
-            <div className={`fixed z-40 top-0 right-0 ${menuOpen ? 'transform translate-x-0' : 'transform translate-x-full'} transition-transform duration-500 ease-in-out w-full h-screen p-9 bg-DarkBlue`}>
+            <div className={`fixed z-40 top-0 right-0 ${menuOpen ? 'transform translate-x-0' : 'transform translate-x-full'} transition-transform duration-500 ease-in-out w-full h-3/4 p-9 bg-Blue bg-opacity-90`}>
                 {menuOpen && (
                     <ul className='mt-40'>
                         {navItems.map((item, index) => (
                             <li
-                                className='w-full p-3 text-center text-xl font-MontserratAlternate font-Regular text-White gap-5'
+                                className='w-full p-3 text-center text-4xl font-Poppins font-Bold text-White gap-5'
                                 key={index}
                             >
                                 <Link className="linkTo textLinks" to={item.link} onClick={handleMenuToggle}>

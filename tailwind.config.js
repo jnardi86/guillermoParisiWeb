@@ -8,6 +8,8 @@ export default {
       TealGreen_2: "#82B3B7",
       TealGreen_3: "#97C3C6",
       TealGreen_4: "#A3CDD2",
+      Blue: "#3956dd",
+      Black: "#312f2b",
       LightBlue: "#A1C9D9",
       DarkBlue: "#223A5E",
       White: "#FFF",
@@ -33,6 +35,9 @@ export default {
         MontserratSubrayada: ["Montserrat Subrayada", "sans-serif"],
         Poppins: ["Poppins", "sans-serif"],
       },
+      fontWeight: {
+        ExtraBold: "800",
+      },
       screens: {
         'mobile': '360px',
         'tablet': '768px',
@@ -43,6 +48,7 @@ export default {
       boxShadow: {
         LightShadowGrey:
           "0 4px 6px -1px rgba(128, 128, 128, 0.5), 0 2px 4px -1px rgba(128, 128, 128, 0.25)",
+          bottom: "0px 4px 10px rgba(0, 0, 0, 0.2)", // Sombra solo en la parte inferior 
       },
     },
   },

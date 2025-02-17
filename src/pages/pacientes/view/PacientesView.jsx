@@ -1,18 +1,30 @@
-import React from 'react'
-import HomeHero from '../../home/components/HomeHero/HomeHero'
+import React, { useRef } from 'react'
+
 import { useTranslation } from 'react-i18next'
+import PacientesHero from '../components/PacientesHero';
+
+import PacientesTestimonios from '../components/PacientesTestimonios';
+import PacientesContacto from '../components/PacientesContacto';
+import PacientesInfoView from '../components/pacientesInfo/PacientesInfoView';
+
 
 const PacientesView = () => {
 
-  const { t } = useTranslation ("translation", { keyPrefix: "patients" });
+  const { t } = useTranslation("translation", { keyPrefix: "patients" });
+  const contactoRef = useRef(null);
 
 
   return (
     <div>
-      <HomeHero />
-      <div className='py-40 px-3'>
-        <h1 className="title-sections font-Bold text-center pb-5 text-DarkBlue">{t('patients_title')}</h1>
-      </div>
+
+      <PacientesHero
+        contactoRef={contactoRef}
+      />
+      <PacientesInfoView/>
+      <PacientesTestimonios />
+      <PacientesContacto
+        contactoRef={contactoRef}
+      />
 
     </div>
   )

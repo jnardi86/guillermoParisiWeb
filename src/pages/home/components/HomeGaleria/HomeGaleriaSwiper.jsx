@@ -3,68 +3,52 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { homeGaleriaItems } from "./HomeGaleriaItems";
 import { useTranslation } from "react-i18next";
-import HomeGaleriaSlide from "./HomeGaleriaSlide";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-
 const HomeGaleriaSwiper = () => {
-
-  const { t } = useTranslation ("translation", { keyPrefix: "home" });
+  const { t } = useTranslation("translation", { keyPrefix: "home" });
 
   return (
     <>
-      <div className="w-full flex items-center justify-center bg-DarkBlue mb-10">
-        <h2 className="title-sections font-Bold text-White text-center py-5">{t('home_gallery_title')}</h2>
+      <div className="w-full flex items-center justify-center mt-20">
+        <h2 className="font-Poppins text-center text-5xl font-ExtraBold text-Black px-4 leading-snug mb-4">
+          {t("home_gallery_title_1")}
+        </h2>
       </div>
-      <div>
+
+      <div className="w-full">
         <Swiper
           loop={true}
-          spaceBetween={5}
-          centeredSlides={true}
+          spaceBetween={10}
+          speed={1500}
           autoplay={{
-            delay: 5000,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
           className="w-full flex justify-center"
           breakpoints={{
-            320: {
-              slidesPerView: 1, // Para pantallas pequeñas
-            },
-            768: {
-              slidesPerView: 2, // Para pantallas más grandes
-            },
-            1024: {
-              slidesPerView: 3, // Para pantallas de escritorio
-            },
-            1280: {
-              slidesPerView: 4, // Para pantallas muy grandes
-            },
+            320: { slidesPerView: 1, centeredSlides: true }, 
+            768: { slidesPerView: 1, centeredSlides: true }, 
+            1024: { slidesPerView: 3, centeredSlides: false }, 
+            1280: { slidesPerView: 4, centeredSlides: false }, 
           }}
         >
           {homeGaleriaItems.map((item) => (
-            <SwiperSlide 
-            key={item.id}
-            className="flex justify-center items-center">
+            <SwiperSlide key={item.id} className="flex justify-center items-center">
               <img
-                className="w-full h-[300px] object-cover"
+                className="w-full h-[300px] tablet:h-[480px] object-cover transition-transform duration-500 ease-in-out hover:scale-105"
                 src={`/images/galeria/${item.imageName}`}
-                alt="Imagen"
+                alt="Imagen de galería"
               />
             </SwiperSlide>
           ))}
         </Swiper>
-
       </div>
     </>
-
-
-
   );
 };
 

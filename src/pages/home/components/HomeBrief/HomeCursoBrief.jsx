@@ -1,6 +1,5 @@
 import React from "react";
-import { homeIntroFechas } from "../homeIntroFechas";
-import QuoteIcon from "./svgIcons/QuoteIcon";
+
 import { useGlobal } from "../../../../hooks/useGlobal";
 import { useTranslation } from "react-i18next";
 
@@ -10,23 +9,18 @@ const HomeCursoBrief = () => {
   const { mobileView } = useGlobal()
 
   return (
-    <div className="flex flex-col items-center m-auto w-full tablet:w-3/4 pt-20">
-      <h1 className="title-sections font-Bold text-center pb-5 text-DarkBlue">
-        {/* CURSO FORMATIVO EN IMPLANTES CIGOMÁTICOS ALL ON X */}
+    <div className="flex flex-col items-center m-auto w-full tablet:w-3/4 mt-20">
+      <h1 className="font-Poppins text-center text-5xl font-ExtraBold text-Black leading-snug mb-2">
         {t('home_brief_title')}
+        <span className="text-White bg-Blue px-2 py-1">{t('home_brief_title_1')}</span>
+        <span className="text-White bg-Blue px-2 py-1">{t('home_brief_title_2')}</span>
       </h1>
+      <p className="font-Poppins font-Bold text-Black text-2xl mb-4">{t('home_brief_title_3')}</p>
       <div className="flex items-start justify-center">
-        {
-          !mobileView && (
-            <div>
-              <QuoteIcon width="50px" height="50px" />
-            </div>
-          )
-        }
-        <h2 className="font-Poppins font-Regular text-center text-lg tablet:text-xl laptop1:text-2xl px-10">
+        <p className="font-Poppins text-Black font-Regular text-start text-xl tablet:text-center laptop2:text-2xl px-10">
           {t('home_brief_text')}
           {/* {t(item.label)} */}
-        </h2>
+        </p>
       </div>
     </div>
   );

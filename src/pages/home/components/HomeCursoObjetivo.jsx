@@ -9,19 +9,10 @@ const HomeCursoObjetivo = () => {
   const { t } = useTranslation ("translation", { keyPrefix: "home" });
 
   return (
-    <div className="w-full laptop1:w-3/4 m-auto mt-40 bg-DarkBlue flex table:rounded-lg shadow-LightShadowGrey">
-      {
-        !mobileView && (
-          <img
-          className="w-[400px]"
-          src="/images/background_objetivos_1.png"
-          alt=""
-        />
-        )
-      }
-      <div className="flex flex-col justify-start laptop1:justify-center items-center p-3">
-        <h2 className="title-sections font-Bold text-Beige pt-3">{t('home_goals_title')}</h2>
-        <p className="text-sections font-Regular text-center py-5 text-LightGray tracking-tight">
+    <div className="w-full laptop1:w-3/4 m-auto mt-20 p-5 flex">
+      <div className="flex flex-col justify-start laptop1:justify-center items-center p-5">
+        <h2 className="font-Poppins font-Bold text-Black text-5xl mb-4">{t('home_goals_title')}</h2>
+        <p className="font-Poppins text-Black font-Regular text-start text-xl tracking-tight tablet:text-center laptop2:text-2xl">
           {t('home_goals_text')}
         </p>
       </div>

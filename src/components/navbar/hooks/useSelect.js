@@ -17,17 +17,17 @@ export const useSelect = () => {
         }),
         option: (provided, state) => ({
             ...provided,
-            backgroundColor: state.isSelected ? 'blue' : '#A1C9D9',
-            color: state.isSelected ? 'white' : 'black',
+            backgroundColor: state.isSelected ? '#3956dd' : '##FFF',
+            color: state.isSelected ? '#FFF' : '#312f2b',
             '&:hover': {
-                backgroundColor: 'lightblue',
+                backgroundColor: '#FFF',
             },
         }),
         menu: (provided) => ({
             ...provided,
             borderRadius: '4px',
             marginTop: '0',
-            backgroundColor: '#A1C9D9'
+            backgroundColor: '#FFF'
         }),
     };
 

@@ -1,48 +1,48 @@
 import React from "react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { homeHeroItems } from "./homeHeroItems";
 import { homeHeroItems as homeHeroItemsMobile } from "./homeHeroItemsMobile";
-import HomeHeroSlide from "./HomeHeroSlide";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 import { useGlobal } from "../../../../hooks/useGlobal";
-
+import "swiper/css";
+import "swiper/css/effect-fade";
 
 const HomeHeroSwiper = () => {
-
-
-  const { mobileView } = useGlobal()
-
+  const { mobileView } = useGlobal();
   const itemsToShow = mobileView ? homeHeroItemsMobile : homeHeroItems;
 
   return (
-    <Swiper
-      loop={true}
-      spaceBetween={30}
-      centeredSlides={true}
-      autoplay={{
-        delay: 5000,
-        disableOnInteraction: false,
-      }}
-      navigation={true}
-      modules={[Autoplay, Pagination, Navigation]}
-      className="mySwiper"
-    >
-      {itemsToShow.map((item) => (
-        <SwiperSlide key={item.id}>
-          <HomeHeroSlide
-            imageName={item.imageName}
-            title={item.title}
-            subtitle={item.subtitle}
-          />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <div className="relative w-full h-[600px]">
+      <Swiper
+        loop={true}
+        effect="fade"
+        fadeEffect={{ crossFade: true }}
+        speed={1500} // Transición más suave
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay, EffectFade]}
+        className="absolute top-0 left-0 w-full h-full bg-Blue"
+      >
+        {itemsToShow.map((item) => (
+          <SwiperSlide key={item.id} className="relative">
+            {/* Imagen de fondo */}
+            <img
+              src={`/images/${item.imageName}`}
+              alt="Imagen Hero"
+              className="w-full h-full object-cover"
+            />
+
+            {/* Capa de opacidad (Siempre aplicada) */}
+            <div className="absolute top-0 left-0 w-full h-full bg-Blue opacity-80"></div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 };
 
 export default HomeHeroSwiper;
+
+
