@@ -12,7 +12,7 @@ const HomeGaleriaSwiper = () => {
 
   return (
     <>
-      <div className="w-full flex items-center justify-center mt-20">
+      <div className="w-full flex items-center justify-center">
         <h2 className="font-Poppins text-center text-5xl font-ExtraBold text-Black px-4 leading-snug mb-4">
           {t("home_gallery_title_1")}
         </h2>

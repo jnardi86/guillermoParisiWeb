@@ -72,7 +72,7 @@ const HomeDirectores = () => {
   return (
     <div
       ref={directoresRef}
-      className="w-full tablet:w-3/4 mx-auto bg-White rounded-lg flex flex-col items-center p-5 pb-10 mt-20"
+      className="w-full tablet:w-3/4 mx-auto bg-White rounded-lg flex flex-col items-center p-5 pb-10 mt-60"
     >
       <h2 className="font-Poppins text-center text-5xl font-ExtraBold text-Black mb-4">
         {t("home_directors_title")}
@@ -97,7 +97,7 @@ const HomeDirectores = () => {
               />
             </div>
             <button
-              className="mt-6 bg-Blue text-White font-Poppins text-xl font-Semibold py-2 px-6 rounded-lg transition-all hover:bg-White hover:text-Blue hover:border hover:border-solid hover:border-1 hover:border-Blue"
+              className="text-center bg-Blue cursor-pointer text-White font-Poppins text-lg tablet:mt-10 tablet:text-xl laptop2:text-2xl font-Bold py-4 px-6 rounded-lg shadow-DarkBlue shadow-lg transition-all hover:bg-White hover:text-Blue hover:border-solid hover:border-Blue hover:border-2"
               onClick={() => showDirectorInfo(director)}
             >
               Conocé más

@@ -15,7 +15,7 @@ const HomeCursoHighlights = () => {
   
 
   return (
-    <div ref={ref} className="w-full flex flex-col m-auto tablet:w-3/4 mt-20">
+    <div ref={ref} className="w-full flex flex-col m-auto tablet:w-3/4 mt-60">
       <div className="flex flex-col items-center text-center">
         <h2 className="font-Poppins text-center text-5xl font-ExtraBold text-Black px-4 leading-snug mb-4">
           {t("home_highlights_title_1")}

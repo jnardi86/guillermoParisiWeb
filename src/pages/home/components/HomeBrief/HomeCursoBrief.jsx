@@ -9,7 +9,7 @@ const HomeCursoBrief = () => {
   const { mobileView } = useGlobal()
 
   return (
-    <div className="flex flex-col items-center m-auto w-full tablet:w-3/4 mt-20">
+    <div className="flex flex-col items-center m-auto w-full tablet:w-3/4 mt-60">
       <h1 className="font-Poppins text-center text-5xl font-ExtraBold text-Black leading-snug mb-2">
         {t('home_brief_title')}
         <span className="text-White bg-Blue px-2 py-1">{t('home_brief_title_1')}</span>

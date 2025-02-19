@@ -48,7 +48,7 @@ const HomeCursoResumen = () => {
 
   return (
     <div
-      className="relative w-full p-6 mt-40 bg-fixed bg-center bg-cover laptop1:h-[480px] laptop2:h-[580px] laptop2:flex laptop2:flex-col laptop2:justify-center laptop2:items-center"
+      className="relative w-full p-6 mt-60 bg-fixed bg-center bg-cover laptop1:h-[480px] laptop2:h-[580px] laptop2:flex laptop2:flex-col laptop2:justify-center laptop2:items-center"
       style={{
         backgroundImage: "url('/images/galeria/galeria_14.jpg')",
       }}

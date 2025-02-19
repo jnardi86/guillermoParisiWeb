@@ -2,7 +2,7 @@ import ToothIcon from "../../../../components/icons/ToothIcon";
 
 const PacientesInfo = () => {
   return (
-    <section className="w-full py-16 px-6 bg-White">
+    <section className="w-full py-16 px-6 mt-60">
 
       {/* Fila 1 - Introducción */}
       <div className="w-full flex flex-col laptop1:flex-row items-center gap-12 mb-12">

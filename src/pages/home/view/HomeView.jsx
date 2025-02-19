@@ -6,8 +6,6 @@ import HomeCursoBrief from "../components/HomeBrief/HomeCursoBrief";
 import HomeGaleria from "../components/HomeGaleria/HomeGaleria";
 import HomeCursoHighlights from "../components/HomeCursoHighlights";
 import HomeCursoFechas from "../components/HomeCursoFechas";
-
-
 import HomeCursoObjetivo from "../components/HomeCursoObjetivo";
 import HomeCursoTeorico from "../components/HomeCursoTeorico";
 import HomeCursoPractico from "../components/HomeCursoPractico";
@@ -15,6 +13,7 @@ import HomeCursoResumen from "../components/HomeResumen/HomeCursoResumen";
 import SectionWrapper from "../../../components/sectionWrapper/SectionWrapper";
 import HomeFormView from "../components/HomeFormInscripcion/HomeFormView";
 import HomeCusoInfo from "../components/HomeCursoInfo";
+import AnimatedSection from "../../../components/animatedSection/AnimatedSection";
 
 const HomeView = () => {
   const { t } = useTranslation("translation", { keyPrefix: "home" });
@@ -26,51 +25,70 @@ const HomeView = () => {
         homeContactoRef={homeContactoRef}
       />
 
-      <SectionWrapper>
+      <AnimatedSection
+        direction="left"
+        triggerOnce>
         <HomeCursoBrief />
-      </SectionWrapper>
+      </AnimatedSection>
 
-      <SectionWrapper>
+      <AnimatedSection
+        direction="right"
+        triggerOnce>
         <HomeDirectores />
-      </SectionWrapper>
+      </AnimatedSection>
 
-      <SectionWrapper>
+      <AnimatedSection
+        direction="left"
+        triggerOnce>
         <HomeCursoObjetivo />
-      </SectionWrapper>
+      </AnimatedSection>
 
-      <SectionWrapper>
+      <AnimatedSection
+        direction="right"
+        triggerOnce>
         <HomeCusoInfo />
-      </SectionWrapper>
+      </AnimatedSection>
 
-      <SectionWrapper>
+      <AnimatedSection
+        direction="left"
+        triggerOnce>
         <HomeCursoHighlights />
-      </SectionWrapper>
+      </AnimatedSection>
+
+      <AnimatedSection
+        direction="right"
+        triggerOnce>
+        <HomeGaleria />
+      </AnimatedSection>
 
       {/* <SectionWrapper>
         <HomeCursoTeorico />
       </SectionWrapper> */}
 
-      <SectionWrapper>
-        <HomeGaleria />
-      </SectionWrapper>
+
 
       {/* <SectionWrapper>
         <HomeCursoPractico />
       </SectionWrapper> */}
 
-      <SectionWrapper>
+      <AnimatedSection
+        direction="left"
+        triggerOnce>
         <HomeCursoResumen />
-      </SectionWrapper>
+      </AnimatedSection>
+
 
       {/* <SectionWrapper>
         <HomeCursoFechas />
       </SectionWrapper> */}
 
-      <SectionWrapper>
+      <AnimatedSection
+        direction="left"
+        triggerOnce>
         <HomeFormView
           homeContactoRef={homeContactoRef}
         />
-      </SectionWrapper>
+      </AnimatedSection>
 
     </div>
   );

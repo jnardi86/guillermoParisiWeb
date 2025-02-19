@@ -8,7 +8,7 @@ const HomeCursoInfo = () => {
 
 
     return (
-        <section className="w-full px-6 bg-White mt-20">
+        <section className="w-full px-6 bg-White mt-60">
 
             {/* Fila 1 - Introducción */}
             <div className="w-full flex flex-col laptop1:flex-row items-center gap-12 mb-12">

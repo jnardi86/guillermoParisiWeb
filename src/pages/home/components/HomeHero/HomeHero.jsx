@@ -22,11 +22,11 @@ const HomeHero = ({ homeContactoRef }) => {
 
       {/* Contenedor de texto */}
       <div
-        className={`relative z-10 text-White px-6 ${
-          desktopView ? "tablet:px-20 laptop1:px-32 laptop2:px-40 text-left" : "tablet:px-12 text-center"
-        }`}
+        className="relative z-10 text-White px-6 desktop:mt-4 laptop1:px-20"
+          // desktopView ? "tablet:px-20 laptop1:px-32 laptop2:px-40 text-left" : "tablet:px-12 text-center"
+        
       >
-        <h1 className="font-Poppins font-Semibold text-4xl tablet:text-5xl laptop1:text-6xl laptop1:text-start leading-tight tablet:leading-snug laptop1:leading-normal mb-6 tablet:mb-10">
+        <h1 className="w-full font-Poppins text-center font-Semibold text-5xl text-White leading-tight mb-8 tablet:leading-relaxed desktop:text-start laptop1:text-6xl laptop1:leading-[5rem]">
           {t("home_hero_title_1")}
           <span className="bg-White text-Blue px-2 font-ExtraBold">
             {t("home_hero_title_1_2")}
@@ -36,10 +36,10 @@ const HomeHero = ({ homeContactoRef }) => {
             {t("home_hero_title_1_4")}
           </span>
         </h1>
-        <p className="font-Montserrat font-Regular text-lg tablet:text-xl laptop1:text-2xl laptop1:text-start mb-6 ">
+        <p className="ffont-Montserrat text-xl mb-10 text-center desktop:text-2xl desktop:text-start">
           {t("home_hero_subtitle_1")}
         </p>
-        <div className="laptop1:w-full laptop1:flex laptop1:justify-start">
+        <div className="w-full flex justify-center">
           <button
             onClick={handleScrollToHomeContact}
             className="text-center bg-White cursor-pointer text-Blue font-Poppins text-lg tablet:mt-10 tablet:text-xl laptop2:text-2xl font-Bold py-4 px-6 rounded-lg shadow-DarkBlue shadow-lg transition-all hover:bg-Blue hover:text-White"

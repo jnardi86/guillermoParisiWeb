@@ -6,6 +6,7 @@ import PacientesHero from '../components/PacientesHero';
 import PacientesTestimonios from '../components/PacientesTestimonios';
 import PacientesContacto from '../components/PacientesContacto';
 import PacientesInfoView from '../components/pacientesInfo/PacientesInfoView';
+import AnimatedSection from '../../../components/animatedSection/AnimatedSection';
 
 
 const PacientesView = () => {
@@ -16,16 +17,29 @@ const PacientesView = () => {
 
   return (
     <div>
-
       <PacientesHero
         contactoRef={contactoRef}
       />
-      <PacientesInfoView/>
-      <PacientesTestimonios />
-      <PacientesContacto
-        contactoRef={contactoRef}
-      />
-
+      <AnimatedSection
+        direction='left'
+        triggerOnce
+      >
+        <PacientesInfoView />
+      </AnimatedSection>
+      <AnimatedSection
+        direction='right'
+        triggerOnce
+      >
+        <PacientesTestimonios />
+      </AnimatedSection>
+      <AnimatedSection
+        direction='right'
+        triggerOnce
+      >
+        <PacientesContacto
+          contactoRef={contactoRef}
+        />
+      </AnimatedSection>
     </div>
   )
 }

@@ -54,7 +54,7 @@ const NavMobile = () => {
                     <ul className='mt-40'>
                         {navItems.map((item, index) => (
                             <li
-                                className='w-full p-3 text-center text-4xl font-Poppins font-Bold text-White gap-5'
+                                className='w-full p-3 text-center text-2xl font-Poppins font-Bold text-White gap-5'
                                 key={index}
                             >
                                 <Link className="linkTo textLinks" to={item.link} onClick={handleMenuToggle}>

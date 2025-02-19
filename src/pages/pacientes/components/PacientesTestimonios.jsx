@@ -26,7 +26,7 @@ const PacientesTestimonios = () => {
   ];
 
   return (
-    <section className="w-full py-16 px-6 bg-White">
+    <section className="w-full px-6 mt-60">
       {/* Título con estilo mejorado */}
       <h2 className="font-Poppins text-4xl font-ExtraBold text-Black text-center mb-8 leading-relaxed desktop:text-6xl">
         Historias Reales <span className="bg-Blue text-White py-2">Sonrisas Reales ! </span>

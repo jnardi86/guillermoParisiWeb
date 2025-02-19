@@ -13,7 +13,7 @@ const HomeCursoFechas = () => {
   const { t } = useTranslation("translation", { keyPrefix: "home" });
 
   return (
-    <div className="w-full tablet:w-3/4 m-auto mt-20 flex flex-col items-center">
+    <div className="w-full tablet:w-3/4 m-auto mt-60 flex flex-col items-center">
       <h2 className="font-Poppins text-center text-5xl font-ExtraBold text-Black px-4 leading-snug mb-4">
         {t("home_residences_title")}
       </h2>

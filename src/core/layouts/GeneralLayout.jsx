@@ -6,7 +6,7 @@ import LanguageProvider from '../../providers/LanguageProvider'
 
 const GeneralLayout = ({ children }) => {
     return (
-        <div className='max-w-[1920px] mx-auto bg-White'>
+        <div className='mx-auto max-w-[1920px] bg-White'>
             <LanguageProvider>
                 <Navbar />
                 {children}
