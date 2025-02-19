@@ -15,7 +15,7 @@ const FormContacto = () => {
   
 
   return (
-    <div className="w-full tablet:w-3/4 laptop1:w-1/2 mx-auto rounded-lg bg-Blue shadow-lg p-6 mb-20">
+    <div className="w-full tablet:w-3/4 laptop1:w-1/2 laptop2:w-1/3 mx-auto rounded-lg bg-Blue shadow-lg p-6 laptop1:p-8 mb-20">
       {/* <h2 className="title-sections font-Bold text-DarkBlue pb-5 text-center">
         {t("home_form_contacto_title")}
       </h2> */}
@@ -101,7 +101,7 @@ const FormContacto = () => {
           <button
             type="submit"
             // className="w-full bg-White text-Blue font-Poppins text-2xl font-SemiBold py-3 rounded-lg hover:bg-teal-700 transition duration-300 laptop1:w-1/2"
-            className=" w-full laptop1:w-1/2 text-center bg-White cursor-pointer text-Blue font-Poppins text-lg tablet:mt-10 tablet:text-xl laptop2:text-2xl font-Bold py-4 px-6 mb-8 rounded-lg shadow-DarkBlue shadow-lg transition-all hover:bg-Blue hover:text-White"
+            className="w-full laptop1:w-1/2 text-center bg-White cursor-pointer text-Blue font-Poppins text-lg tablet:mt-10 tablet:text-xl laptop2:text-2xl font-Bold py-4 px-6 mb-8 rounded-lg shadow-DarkBlue shadow-lg transition-all hover:bg-Blue hover:text-White"
 
             disabled={isSubmitting}
           >

@@ -43,11 +43,7 @@ const HomeView = () => {
         <HomeCursoObjetivo />
       </AnimatedSection>
 
-      <AnimatedSection
-        direction="right"
-        triggerOnce>
         <HomeCusoInfo />
-      </AnimatedSection>
 
       <AnimatedSection
         direction="left"
