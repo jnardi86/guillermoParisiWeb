@@ -7,6 +7,7 @@ import PacientesTestimonios from '../components/PacientesTestimonios';
 import PacientesContacto from '../components/PacientesContacto';
 import PacientesInfoView from '../components/pacientesInfo/PacientesInfoView';
 import AnimatedSection from '../../../components/animatedSection/AnimatedSection';
+import WhatsAppIcon from '../../../components/whatsapp/WhatsAppIcon';
 
 
 const PacientesView = () => {
@@ -40,6 +41,7 @@ const PacientesView = () => {
           contactoRef={contactoRef}
         />
       </AnimatedSection>
+      <WhatsAppIcon />
     </div>
   )
 }
