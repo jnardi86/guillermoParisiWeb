@@ -97,7 +97,7 @@ const HomeDirectores = () => {
               />
             </div>
             <button
-              className="text-center bg-Blue cursor-pointer text-White font-Poppins text-lg tablet:mt-10 tablet:text-xl laptop2:text-2xl font-Bold py-4 px-6 rounded-lg shadow-DarkBlue shadow-lg transition-all hover:bg-White hover:text-Blue hover:border-solid hover:border-Blue hover:border-2"
+              className="text-center bg-Blue cursor-pointer text-White font-Poppins text-lg tablet:mt-10 tablet:text-xl laptop2:text-2xl font-Bold py-4 px-6 rounded-lg shadow-DarkBlue shadow-lg transition-transform duration-1000 ease-in-out hover:bg-White hover:text-Blue hover:border-solid hover:border-Blue hover:border-2 hover:scale-110"
               onClick={() => showDirectorInfo(director)}
             >
               Conocé más
